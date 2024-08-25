@@ -5,10 +5,10 @@ tags={
 	"Balance"
 	"Technologies"
 }
-name="R56RP Historical Edition"
+name="R56RP Historical Edition EXPERIMENTAL"
 dependencies={
 	"The Road to 56"
+	"The Road to 56 [BETA]"
 }
-name="R56RP Historical Edition - EXPERIMENTAL"
 picture="thumbnail.png"
 supported_version="1.14.*"
