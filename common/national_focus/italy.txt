@@ -8573,7 +8573,7 @@ focus_tree = {
 		id = ITA_the_abyssinian_fiasco
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		mutually_exclusive = { focus = ITA_solid_progress focus = ITA_struggle_in_ethiopia }
-		x = 29
+		x = 10
 		y = 0
 		relative_position_id = ITA_naval_power_projection
 		cost = 5
@@ -8626,30 +8626,30 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_the_abyssinian_fiasco focus = ITA_struggle_in_ethiopia }
 		x = 2
 		y = 0
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_dlc = "By Blood Alone"
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = ITA_culto_del_duce
-					has_completed_focus = ITA_convene_the_grand_council
-				}
-			}
-		}
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				NOT = {
-					has_dlc = "By Blood Alone"
-				}
-			}		
-		}
+		#offset = {
+		#	x = -18
+		#	y = 0
+		#	trigger = {
+		#		has_dlc = "By Blood Alone"
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		OR = {
+		#			has_completed_focus = ITA_culto_del_duce
+		#			has_completed_focus = ITA_convene_the_grand_council
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = -10
+		#	y = 0
+		#	trigger = {
+		#		NOT = {
+		#			has_dlc = "By Blood Alone"
+		#		}
+		#	}		
+		#}
 
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 5
@@ -8708,7 +8708,61 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = ITA_undermine_the_duce
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = ITA_struggle_in_ethiopia }
+		x = 6
+		y = 1
+		relative_position_id = ITA_struggle_in_ethiopia
+		cost = 5
+
+		allow_branch = {
+			always = no
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {
+			add_war_support = -0.05
+			add_political_power = 50
+
+			if = {
+				limit = {
+					has_any_power_balance = no
+				}
+				set_power_balance = {
+					id = ITA_power_balance
+					left_side = ITA_grand_council_side # will keep the last set side if not specified
+					right_side = ITA_mussolini_side # will keep the last set side if not specified
+					#set_default = yes # whether or not to reset the power balance to the initial value, default = no
+					set_value = 0.2
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = ITA_undermine_the_duce }
+				}
+				ITA_bop_medium_decrease_effect = yes
+			}
+			else = {
+				effect_tooltip = {
+					set_power_balance = {
+						id = ITA_power_balance
+						left_side = ITA_grand_council_side # will keep the last set side if not specified
+						right_side = ITA_mussolini_side # will keep the last set side if not specified
+						set_value = 0.2
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = ITA_struggle_in_ethiopia
+				}
+				unlock_decision_tooltip = ITA_bop_slander_the_duce
+				unlock_decision_tooltip = ITA_bop_criticize_the_war
+			}
+		}
+	}
 
 	focus = {
 		id = ITA_servizio_informazione_militare
@@ -9540,7 +9594,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_defy_the_duce }
 
 		allow_branch = {
-			always = false
+			always = no
 		}
 
 		x = 20
@@ -10204,7 +10258,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
 
 		x = 0
-		y = 5
+		y = 1
 		relative_position_id = ITA_la_battaglia_per_le_nascite
 		cost = 10
 		available = {
@@ -13532,7 +13586,41 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_mobilize_the_railway_guns
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = ITA_prepare_for_the_coming_wars }
 
+		x = -1
+		y = 1
+		relative_position_id = ITA_prepare_for_the_coming_wars
+		cost = 5
+
+		allow_branch = {
+			always = no
+		}
+
+		available = {
+			has_tech = armored_train
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_mobilize_the_railway_guns_military_industry_dm_tt
+			hidden_effect = {
+				add_ideas = ITA_hidden_railway_gun_production_ns
+			}
+
+			if = {
+				limit = {
+					NOT = { has_tech = railway_gun }
+				}
+				set_technology = { railway_gun = 1 }
+			}
+			ITA_mobilize_railway_guns = yes
+		}
+	}
 
 	focus = {
 		id = ITA_bring_back_old_glories
@@ -14545,6 +14633,9 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_towards_a_greater_italy }
 		x = 31
 		y = 0
+		allow_branch = {
+			always = no
+		}
 		offset = {
 			x = -25
 			y = 0
@@ -15600,35 +15691,35 @@ focus_tree = {
 			}
 		}
 
-		x = 52
+		x = 16
 		y = 1
-		offset = {
-			x = -29
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "By Blood Alone" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = ITA_culto_del_duce
-					}
-				}
-			}
-		}
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = ITA_convene_the_grand_council
-			}
-		}
+		#offset = {
+		#	x = -29
+		#	y = 0
+		#	trigger = {
+		#		OR = {
+		#			NOT = { has_dlc = "By Blood Alone" }
+		#			AND = {
+		#				has_game_rule = {
+		#					rule = obsolete_focus_branches_visibility
+		#					option = HIDE
+		#				}
+		#				has_completed_focus = ITA_culto_del_duce
+		#			}
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = -12
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = ITA_convene_the_grand_council
+		#	}
+		#}
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
@@ -15772,7 +15863,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_albanian_occupation }
 
-		x = -16
+		x = -9
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 3
@@ -15873,7 +15964,7 @@ focus_tree = {
 		icon = GFX_goal_commie_kill_zog
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_formalize_the_albanian_protectorate }
-		x = -14
+		x = -7
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
@@ -16173,6 +16264,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
+		allow_branch = {
+			always = no
+		}
 		available = {
 			country_exists = AUS
 			NOT = { has_war_with = AUS }
@@ -16675,7 +16769,7 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_guarantee_austrian_independence focus = ITA_militarize_the_rome_protocols }
-		x = -6
+		x = -1
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
@@ -16992,6 +17086,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 10
+		allow_branch = {
+			always = no
+		}
 
 		ai_will_do = {
 			factor = 29
@@ -17793,7 +17890,7 @@ focus_tree = {
 		icon = GFX_goal_generic_spanish_civil_war_soldier
 		prerequisite = { focus = ITA_foreign_affairs }
 
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
@@ -19786,7 +19883,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			always = false
+			always = no
 		}
 
 		offset = {
@@ -19835,7 +19932,52 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = ITA_liberate_gramsci
+		icon = GFX_focus_ITA_liberate_gramsci
+		prerequisite = { focus = ITA_unite_the_opposition focus = ITA_triumph_in_africa_bba }
+
+		x = 2
+		y = 2
+		relative_position_id = ITA_unite_the_opposition
+		cost = 5
+
+		allow_branch = {
+			always = no
+		}
+
+		available = {
+			NOT = { has_global_flag = ITA_antifascist_civil_war_triggered_flag }
+			date < 1937.1.1
+			has_civil_war = no
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_political_power = 50
+
+			custom_effect_tooltip = ITA_liberate_gramsci_tt
+			effect_tooltip = {
+				add_country_leader_role = {
+					character =  ITA_antonio_gramsci
+					country_leader = {
+						ideology = marxism
+						expire = 1965.1.1
+						traits = { indisposed_political_scientist }
+					}
+				}
+			}
+
+			hidden_effect = {
+				country_event = { id = BBA_italy_communist_events.09 days = 760 random_days = 60 }
+			}
+		}
+	}
 
 	focus = {
 		id = ITA_organize_strikes_in_the_north
@@ -19908,7 +20050,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			always = false
+			always = no
 		}
 		
 		available = {

@@ -22,6 +22,9 @@ focus_tree = {
 		id = KMT_internal_stability
 		icon = GFX_goal_kmt_china
 		mutually_exclusive = { focus = KMT_external_defense }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			NOT = { has_war_with = JAP }
 			OR = {
@@ -360,7 +363,7 @@ focus_tree = {
 		bypass = {
 			has_war_with = JAP
 		}
-		x = 4
+		x = 2
 		y = 0
 		cost = 5
 		
@@ -415,8 +418,8 @@ focus_tree = {
 				is_in_faction_with = JAP
 			}
 		}
-		
-		x = 4
+		relative_position_id = KMT_external_defense
+		x = -1
 		y = 1
 		cost = 10
 		
@@ -599,7 +602,8 @@ focus_tree = {
 			is_in_faction_with = JAP
 		}
 		
-		x = 6
+		relative_position_id = KMT_external_defense
+		x = 1
 		y = 1
 		cost = 10
 		
@@ -730,7 +734,8 @@ focus_tree = {
 				is_in_faction_with = JAP
 			}
 		}
-		x = 4
+		relative_position_id = KMT_external_defense
+		x = 0
 		y = 3
 		cost = 10
 		
@@ -807,7 +812,8 @@ focus_tree = {
 				add = 0.1
 			}
 		}
-		x = 2
+		relative_position_id = KMT_external_defense
+		x = -1
 		y = 5
 		cost = 10
 		
@@ -852,7 +858,8 @@ focus_tree = {
 				has_war_with = TIB
 			}
 		}
-		x = 4
+		relative_position_id = KMT_external_defense
+		x = 1
 		y = 5
 		cost = 10
 		ai_will_do = {
@@ -1001,7 +1008,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 3
+		relative_position_id = KMT_external_defense
+		x = 0
 		y = 6
 		cost = 10
 		
@@ -2105,7 +2113,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 3
+		relative_position_id = KMT_external_defense
+		x = 1
 		y = 2
 		cost = 10
 		bypass = {
@@ -2616,7 +2625,7 @@ focus_tree = {
 	focus = {
 		id = KMT_political_effort
 		icon = GFX_focus_chi_legislative_yuan
-		x = 33
+		x = 25
 		y = 0
 		cost = 10
 
@@ -2654,6 +2663,9 @@ focus_tree = {
 		mutually_exclusive = { focus = KMT_unitary_semi_presidential_republic }
 		mutually_exclusive = { focus = KMT_promote_nationalism }
 		prerequisite = { focus = KMT_political_effort }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			is_puppet = no
 		}
@@ -2689,7 +2701,7 @@ focus_tree = {
 			is_puppet = no
 		}
 		relative_position_id = KMT_political_effort
-		x = -8
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -2705,6 +2717,9 @@ focus_tree = {
 		prerequisite = { focus = KMT_political_effort }
 		mutually_exclusive = { focus = KMT_democratic_republic }
 		mutually_exclusive = { focus = KMT_unitary_semi_presidential_republic }
+		allow_branch = {
+			always = no
+		}
 		available = {
 			OR = {
 				is_puppet = no
@@ -2729,8 +2744,9 @@ focus_tree = {
 		id = KMT_cbis
 		icon = GFX_goal_generic_secret_police
 		prerequisite = { focus = KMT_unitary_semi_presidential_republic }
-		x = 25
-		y = 2
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 0
+		y = 1
 		cost = 10
 		completion_reward = {
 			if = {
@@ -2775,8 +2791,9 @@ focus_tree = {
 		id = KMT_cement_control_on_the_economy
 		icon = GFX_goal_generic_state_economy
 		prerequisite = { focus = KMT_cbis }
-		x = 26
-		y = 3
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 1
+		y = 2
 		cost = 10
 		completion_reward = {
 			IF = {
@@ -2814,8 +2831,9 @@ focus_tree = {
 		id = KMT_zhonghua_minzu
 		icon = GFX_goal_generic_multinational_army
 		prerequisite = { focus = KMT_cbis }
-		x = 24
-		y = 3
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = -1
+		y = 2
 		cost = 10
 		completion_reward = {
 			IF = {
@@ -2845,8 +2863,9 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 		}
-		x = 25
-		y = 4
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 0
+		y = 3
 		cost = 10
 		completion_reward = {
 			#add_ideas = KMT_central_power
@@ -2874,8 +2893,9 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 		}
-		x = 25
-		y = 5
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 0
+		y = 4
 		cost = 10
 		completion_reward = {
 			set_rule = { 
@@ -2933,8 +2953,9 @@ focus_tree = {
 				has_government = democratic
 			}
 		}
-		x = 26
-		y = 6
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 1
+		y = 5
 		cost = 10
 		completion_reward = {
 			add_research_slot = 1
@@ -4002,8 +4023,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 24
-		y = 6
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = -1
+		y = 5
 		cost = 10
 		bypass = {
 			728 = {
@@ -4758,7 +4780,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = KMT_political_effort }
 		relative_position_id = KMT_political_effort
-		x = 6
+		x = 2
 		y = 1
 		cost = 40
 		#cost = 50
@@ -4790,7 +4812,8 @@ focus_tree = {
 	focus = {
 		id = KMT_the_big_rear_concept
 		icon = GFX_goal_CHI_big_rear
-		x = 47
+		relative_position_id = KMT_political_effort
+		x = 6
 		y = 0
 		cost = 14.3
 		
@@ -7314,8 +7337,8 @@ focus_tree = {
 		id = KMT_draw_closer_to_the_empire
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = KMT_democratic_republic focus = KMT_unitary_semi_presidential_republic }
-		relative_position_id = KMT_democratic_republic
-		x = -3
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 3
 		y = 1
 		cost = 2
 		
@@ -7483,8 +7506,9 @@ focus_tree = {
 			ENG = { has_war_with = JAP }
 		}
 		prerequisite = { focus = KMT_draw_closer_to_the_empire  }
-		x = 28
-		y = 3
+		relative_position_id = KMT_unitary_semi_presidential_republic
+		x = 3
+		y = 2
 		cost = 5
 		
 		completion_reward = {
@@ -7727,7 +7751,8 @@ focus_tree = {
 	focus = {
 		id = KMT_deal_with_SIK
 		icon = GFX_goal_CHI_sinkiang
-		x = 3
+		relative_position_id = KMT_external_defense
+		x = 0
 		y = 4
 		cost = 10
 		prerequisite = { focus = KMT_warlord focus = KMT_national_def_propaganda }

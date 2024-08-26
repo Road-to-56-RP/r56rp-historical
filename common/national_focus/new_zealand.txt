@@ -2261,6 +2261,10 @@ focus = {
 		
 	}
 
+	allow_branch = {
+		always = no
+	}
+
 	available = {
 		has_country_flag = NZL_national_flag
 	}
@@ -2580,6 +2584,9 @@ focus = {
 
 	cost = 5
 
+	allow_branch = {
+		always = no
+	}
 
 	ai_will_do = {
 		factor = 0
@@ -2988,6 +2995,9 @@ focus = {
 
 	cost = 5
 
+	allow_branch = {
+		always = no
+	}
 
 	ai_will_do = {
 		factor = 0

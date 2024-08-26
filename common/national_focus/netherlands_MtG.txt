@@ -3518,7 +3518,7 @@ focus_tree = {
 			has_capitulated = yes
 		}
 		icon = GFX_goal_HOL_golden_lion
-		x = 29
+		x = 22
 		y = 0
 		relative_position_id = HOL_abandon_the_gold_standard
 		cost = 10
@@ -3817,8 +3817,8 @@ focus_tree = {
 	focus = {
 		id = HOL_volk_en_vaderland
 		prerequisite = { focus = HOL_cave_to_the_germans focus = HOL_maintain_trade_neutrality focus = HOL_cave_to_the_british }
-		available = {
-			
+		allow_branch = {
+			always = no
 		}
 		# prerequisite = { focus = HOL_cave_to_the_germans }
 		mutually_exclusive = { focus = HOL_oranje_boven focus = HOL_unity_through_democracy focus = HOL_legacy_of_the_de_zeven_provincien_mutiny }
@@ -4645,6 +4645,9 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = HOL_curtail_colonial_autonomy
 			}
+		}
+		allow_branch = {
+			always = no
 		}
 		mutually_exclusive = { focus = HOL_oranje_boven focus = HOL_unity_through_democracy focus = HOL_volk_en_vaderland }
 		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
@@ -5779,6 +5782,9 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = HOL_curtail_colonial_autonomy }
 		}
+		allow_branch = {
+			always = no
+		}
 		# prerequisite = { focus = HOL_maintain_trade_neutrality }
 		mutually_exclusive = { focus = HOL_volk_en_vaderland focus = HOL_unity_through_democracy focus = HOL_legacy_of_the_de_zeven_provincien_mutiny }
 		icon = GFX_focus_hol_oranje_boven
@@ -5873,9 +5879,9 @@ focus_tree = {
 			has_government = neutrality
 		}
 		icon = GFX_goal_generic_political_pressure
-		x = 1
+		x = -4
 		y = 1
-		relative_position_id = HOL_oranje_boven
+		relative_position_id = HOL_unity_through_democracy
 		cost = 10
 
 		available_if_capitulated = yes
@@ -6398,7 +6404,7 @@ focus_tree = {
 		prerequisite = { focus = HOL_cave_to_the_british focus = HOL_maintain_trade_neutrality focus = HOL_cave_to_the_germans }
 		mutually_exclusive = { focus = HOL_oranje_boven focus = HOL_volk_en_vaderland focus = HOL_legacy_of_the_de_zeven_provincien_mutiny }
 		icon = GFX_goal_support_democracy
-		x = 3
+		x = -4
 		y = 1
 		relative_position_id = HOL_cave_to_the_british
 		cost = 10
@@ -6498,9 +6504,9 @@ focus_tree = {
 		prerequisite = { focus = HOL_oranje_boven focus = HOL_unity_through_democracy }
 		mutually_exclusive = { focus = HOL_lead_the_minor_democracies }
 		icon = GFX_focus_chi_british_cooperation
-		x = 3
+		x = -2
 		y = 1
-		relative_position_id = HOL_oranje_boven
+		relative_position_id = HOL_unity_through_democracy
 		cost = 10
 
 		available_if_capitulated = yes

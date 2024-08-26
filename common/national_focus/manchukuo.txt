@@ -3386,17 +3386,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = MAN_obedience
-				}
-			}
+			always = no
 		}
 		#offset = {
 		#	x = 0
@@ -3533,9 +3523,9 @@ focus_tree = {
 		id = MAN_national_martyr_shrine
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = MAN_obedience  focus = MAN_assertiveness }
-		x = -4
+		x = 2
 		y = 1
-		relative_position_id = MAN_assertiveness
+		relative_position_id = MAN_obedience
 
 		cost = 10
 
