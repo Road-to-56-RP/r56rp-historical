@@ -4615,6 +4615,10 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			always = no
+		}
+
 		cost = 10
 		
 		ai_will_do = {
@@ -4716,6 +4720,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cost = 10
+
+		allow_branch = {
+			always = no
+		}
 		
 		ai_will_do = {
 			factor = 5
@@ -6218,21 +6226,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						#has_completed_focus = r56_CAN_fascism
-						has_completed_focus = r56_CAN_alliance_with_america
-						has_completed_focus = r56_CAN_communism
-					}
-				}
-			}
+			always = no
 		}
 		
 		prerequisite = {
@@ -6318,21 +6312,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						#has_completed_focus = r56_CAN_fascism
-						has_completed_focus = r56_CAN_alliance_with_america
-						has_completed_focus = r56_CAN_communism
-					}
-				}
-			}
+			always = no
 		}
 		
 		prerequisite = {
@@ -6456,6 +6436,10 @@ focus_tree = {
 		y = 3
 		
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			always = no
+		}
 
 		cost = 10
 		
@@ -7326,6 +7310,9 @@ focus_tree = {
 		relative_position_id = r56_CAN_forge_our_own_future
 		x = 13
 		y = 3
+		allow_branch = {
+			always = no
+		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8387,7 +8374,7 @@ focus_tree = {
 	focus = {
 		id = r56_CAN_suppress_the_separatists
 		icon = GFX_focus_generic_strike_at_democracy1
-		relative_position_id = r56_CAN_forge_our_own_future
+		relative_position_id = r56_CAN_trust_in_the_commonwealth
 		x = 2
 		y = 0
 		
@@ -8441,6 +8428,9 @@ focus_tree = {
 		relative_position_id = r56_CAN_forge_our_own_future
 		x = 23
 		y = 0
+		allow_branch = {
+			always = no
+		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 

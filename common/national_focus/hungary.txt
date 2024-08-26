@@ -38,17 +38,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = HUN_economic_intervention
-				}
-			}
+			always = no
 		}
 
 		completion_reward = {
@@ -2158,20 +2148,20 @@ focus_tree = {
 		id = HUN_expand_the_levente
 		icon = GFX_goal_HUN_expand_the_levente
 		prerequisite = { focus = HUN_strengthen_fascists focus = HUN_elect_a_fascist_king }
-		x = 3
-		y = 1
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_economic_intervention
-			}
-			x = -20
-			y = 0
-		}
-		relative_position_id = HUN_elect_a_fascist_king
+		x = 1
+		y = 2
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_economic_intervention
+		#	}
+		#	x = -20
+		#	y = 0
+		#}
+		relative_position_id = HUN_economic_intervention
 
 		cost = 10
 
@@ -2202,19 +2192,19 @@ focus_tree = {
 		id = HUN_economic_intervention
 		icon = GFX_goal_generic_state_economy
 		mutually_exclusive = { focus = HUN_balanced_budget }
-		x = 20
+		x = 4
 		y = 0
 
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_economic_intervention
-			}
-			x = -20
-		}
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_economic_intervention
+		#	}
+		#	x = -20
+		#}
 
 		cost = 10
 
@@ -2256,7 +2246,7 @@ focus_tree = {
 		icon = GFX_goal_HUN_party_national_will
 		prerequisite = { focus = HUN_economic_intervention }
 		mutually_exclusive = { focus = HUN_council_of_peoples_commissars }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = HUN_economic_intervention
 
@@ -3911,6 +3901,10 @@ focus_tree = {
 		x = 5
 		y = 1
 
+		allow_branch = {
+			always = no
+		}
+
 		cost = 10
 
 		ai_will_do = {
@@ -5352,29 +5346,30 @@ focus_tree = {
 	focus = {
 		id = HUN_industrial_revitalization
 		icon = GFX_goal_generic_construction
-		x = 37
+		relative_position_id = HUN_economic_intervention
+		x = 9
 		y = 0
 
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_balanced_budget
-			}
-			x = -8
-		}
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_economic_intervention
-			}
-			x = -17
-		}
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_balanced_budget
+		#	}
+		#	x = -8
+		#}
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_economic_intervention
+		#	}
+		#	x = -17
+		#}
 		cost = 10
 
 		ai_will_do = {
@@ -6277,28 +6272,29 @@ focus_tree = {
 	focus = {
 		id = HUN_secret_rearmament
 		icon = GFX_focus_secret_rearmament
-		x = 46
+		relative_position_id = HUN_industrial_revitalization
+		x = 9
 		y = 0
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_balanced_budget
-			}
-			x = -8
-		}
-		offset = {
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = HUN_economic_intervention
-			}
-			x = -17
-		}
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_balanced_budget
+		#	}
+		#	x = -8
+		#}
+		#offset = {
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = HUN_economic_intervention
+		#	}
+		#	x = -17
+		#}
 		cost = 10
 
 		ai_will_do = {

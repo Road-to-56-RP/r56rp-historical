@@ -8573,7 +8573,7 @@ focus_tree = {
 		id = ITA_the_abyssinian_fiasco
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		mutually_exclusive = { focus = ITA_solid_progress focus = ITA_struggle_in_ethiopia }
-		x = 29
+		x = 10
 		y = 0
 		relative_position_id = ITA_naval_power_projection
 		cost = 5
@@ -8626,30 +8626,30 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_the_abyssinian_fiasco focus = ITA_struggle_in_ethiopia }
 		x = 2
 		y = 0
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_dlc = "By Blood Alone"
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = ITA_culto_del_duce
-					has_completed_focus = ITA_convene_the_grand_council
-				}
-			}
-		}
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				NOT = {
-					has_dlc = "By Blood Alone"
-				}
-			}		
-		}
+		#offset = {
+		#	x = -18
+		#	y = 0
+		#	trigger = {
+		#		has_dlc = "By Blood Alone"
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		OR = {
+		#			has_completed_focus = ITA_culto_del_duce
+		#			has_completed_focus = ITA_convene_the_grand_council
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = -10
+		#	y = 0
+		#	trigger = {
+		#		NOT = {
+		#			has_dlc = "By Blood Alone"
+		#		}
+		#	}		
+		#}
 
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 5
@@ -8718,18 +8718,8 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_defy_the_duce }
-			}
+			always = no
 		}
-
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
@@ -9633,17 +9623,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_defy_the_duce }
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_defy_the_duce }
-			}
+			always = no
 		}
 
 		x = 20
@@ -10307,7 +10287,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
 
 		x = 0
-		y = 5
+		y = 1
 		relative_position_id = ITA_la_battaglia_per_le_nascite
 		cost = 10
 		available = {
@@ -13646,18 +13626,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_defy_the_duce }
-			}
+			always = no
 		}
 
 		available = {
@@ -14693,6 +14662,9 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_towards_a_greater_italy }
 		x = 31
 		y = 0
+		allow_branch = {
+			always = no
+		}
 		offset = {
 			x = -25
 			y = 0
@@ -15745,35 +15717,35 @@ focus_tree = {
 			}
 		}
 
-		x = 52
+		x = 16
 		y = 1
-		offset = {
-			x = -29
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "By Blood Alone" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = ITA_culto_del_duce
-					}
-				}
-			}
-		}
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = ITA_convene_the_grand_council
-			}
-		}
+		#offset = {
+		#	x = -29
+		#	y = 0
+		#	trigger = {
+		#		OR = {
+		#			NOT = { has_dlc = "By Blood Alone" }
+		#			AND = {
+		#				has_game_rule = {
+		#					rule = obsolete_focus_branches_visibility
+		#					option = HIDE
+		#				}
+		#				has_completed_focus = ITA_culto_del_duce
+		#			}
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = -12
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = ITA_convene_the_grand_council
+		#	}
+		#}
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
@@ -16002,7 +15974,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_albanian_occupation }
 
-		x = -16
+		x = -9
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 3
@@ -16103,7 +16075,7 @@ focus_tree = {
 		icon = GFX_goal_commie_kill_zog
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_formalize_the_albanian_protectorate }
-		x = -14
+		x = -7
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
@@ -16403,6 +16375,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
+		allow_branch = {
+			always = no
+		}
 		available = {
 			country_exists = AUS
 			NOT = { has_war_with = AUS }
@@ -16902,7 +16877,7 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = ITA_ally_yugoslavia focus = ITA_balkan_ambition }
 		mutually_exclusive = { focus = ITA_guarantee_austrian_independence focus = ITA_militarize_the_rome_protocols }
-		x = -6
+		x = -1
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 5
@@ -17219,6 +17194,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ally_yugoslavia
 		cost = 10
+		allow_branch = {
+			always = no
+		}
 
 		ai_will_do = {
 			factor = 29
@@ -18445,7 +18423,7 @@ focus_tree = {
 		icon = GFX_goal_generic_spanish_civil_war_soldier
 		prerequisite = { focus = ITA_foreign_affairs }
 
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
@@ -20532,17 +20510,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-			}
+			always = no
 		}
 
 		offset = {
@@ -20602,17 +20570,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-			}
+			always = no
 		}
 
 		available = {
@@ -20719,17 +20677,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			has_dlc = "By Blood Alone"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-			}
+			always = no
 		}
 		
 		available = {

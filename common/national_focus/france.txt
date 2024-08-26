@@ -161,19 +161,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_action_francaise
-				}
-			}
+			always = no
 		}
 		
 		ai_will_do = {
@@ -215,8 +203,8 @@ focus_tree = {
 			focus = FRA_radicalize_front
 			focus = FRA_action_francaise
 		}
-		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 15
+		relative_position_id = FRA_rearmament
+		x = 9
 		y = 0
 		offset = {
 			x = -5
@@ -282,19 +270,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_action_francaise
-				}
-			}
+			always = no
 		}
 		ai_will_do = {
 			factor = 2
@@ -348,20 +324,8 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-				}
-			}
-		}		
+			always = no
+		}
 		ai_will_do = {
 			factor = 2.4
 			modifier = {
@@ -1578,6 +1542,9 @@ focus_tree = {
 		}
 		x = 5
 		y = 0
+		allow_branch = {
+			always = no
+		}
 		relative_position_id = FRA_continue_mandat
 		available = {
 			is_subject = no
@@ -3049,7 +3016,7 @@ focus_tree = {
 			focus = FRA_status_quo
 			focus = FRA_radicalize_front
 		}
-		x = -4.75
+		x = -2
 		y = 1
 		relative_position_id = FRA_status_quo
 		offset = {
@@ -4935,20 +4902,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_papal_rehabilitation
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
-				}
-			}
+			always = no
 		}
 		ai_will_do = {
 			factor = 1.9
@@ -5045,20 +4999,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_papal_rehabilitation
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
-				}
-			}
+			always = no
 		}
 		ai_will_do = {
 			factor = 6
@@ -5157,21 +5098,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_side_with_the_orleanists
-					has_completed_focus = FRA_support_the_legitimatises
-				}
-			}
+			always = no
 		}
 		ai_will_do = {
 			factor = 3
@@ -5391,21 +5318,8 @@ focus_tree = {
 			focus = FRA_national_integralism
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_support_the_legitimatises
-					has_completed_focus = FRA_brumaire_movement
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_far_right_leagues
-				}
-			}
-		}	
+			always = no
+		}
 		
 		ai_will_do = {
 			factor = 3
@@ -5667,21 +5581,7 @@ focus_tree = {
 			factor = 6
 		}
 		allow_branch = {
-			has_dlc = "La Resistance"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
-				}
-			}
+			always = no
 		}
 		completion_reward = {
 			SPB = {
@@ -5718,6 +5618,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_assist_the_carlist_cause
+		allow_branch = {
+			always = no
+		}
 		
 		available = {
 			SPR_scw_in_progress = yes
@@ -6569,22 +6472,8 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_side_with_the_orleanists
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_brumaire_movement
-					has_completed_focus = FRA_radicalize_front
-				}
-			}
-		}	
+			always = no
+		}
 		
 		ai_will_do = {
 			factor = 10
@@ -9305,38 +9194,38 @@ focus_tree = {
 	focus = {
 		id = FRA_intervention_in_spain
 		icon = GFX_focus_focus_fra_intervention_spain
-		x = -7
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = FRA_status_quo
 			focus = FRA_far_right_leagues
 		}
 		
-		relative_position_id = FRA_far_right_leagues
+		relative_position_id = FRA_status_quo
 		cost = 5
 
-		offset = {
-			x = -6
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_status_quo
-			}
-		}
-		offset = {
-			x = 6
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_far_right_leagues
-			}
-		}
+		#offset = {
+		#	x = -6
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_status_quo
+		#	}
+		#}
+		#offset = {
+		#	x = 6
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_far_right_leagues
+		#	}
+		#}
 
 		ai_will_do = {
 			factor = 0.5
@@ -10026,78 +9915,78 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_de_gaulle_strategy
 		}
-		x = 67
+		relative_position_id = FRA_status_quo
+		x = 9
 		y = 0
-		offset = {
-			x = -28
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_action_francaise
-			}
-		}
-		offset = {
-			x = -14
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = FRA_support_the_legitimatises
-					has_completed_focus = FRA_side_with_the_orleanists
-				}
-			}
-		}
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_brumaire_movement
-			}
-		}
-		offset = {
-			x = -47
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_status_quo
-			}
-		}
-		offset = {
-			x = -50
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_far_right_leagues
-			}
-		}
-		offset = {
-			x = -54
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_radicalize_front
-			}
-		}
-		relative_position_id = FRA_rearmament
+		#offset = {
+		#	x = -28
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_action_francaise
+		#	}
+		#}
+		#offset = {
+		#	x = -14
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		OR = {
+		#			has_completed_focus = FRA_support_the_legitimatises
+		#			has_completed_focus = FRA_side_with_the_orleanists
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = -18
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_brumaire_movement
+		#	}
+		#}
+		#offset = {
+		#	x = -47
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_status_quo
+		#	}
+		#}
+		#offset = {
+		#	x = -50
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_far_right_leagues
+		#	}
+		#}
+		#offset = {
+		#	x = -54
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = FRA_radicalize_front
+		#	}
+		#}
 		ai_will_do = {
 			factor = 2
 		}

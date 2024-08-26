@@ -3441,22 +3441,7 @@ focus_tree = {
 		id = POL_radicalize_the_front
 		icon = GFX_goal_generic_revolt
 		allow_branch = { #new check
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_assemble_the_regency_council
-						has_completed_focus = POL_rewrite_1935_constitution
-						has_completed_focus = POL_organize_the_peasants_strike
-					}
-				}
-			}
+			always = no
 		}
 
 		mutually_exclusive = { 
@@ -3502,9 +3487,9 @@ focus_tree = {
 			focus = POL_rewrite_1935_constitution focus = POL_organize_the_peasants_strike 
 			focus = POL_assemble_the_regency_council
 		}
-		x = 11
+		x = 26
 		y = 0
-		relative_position_id = POL_radicalize_the_front
+		relative_position_id = POL_prepare_for_the_next_war
 		cost = 10
 
 		ai_will_do = {
@@ -3641,22 +3626,7 @@ focus_tree = {
 			focus = POL_assemble_the_regency_council 
 		}
 		allow_branch = { #new check
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_assemble_the_regency_council
-						has_completed_focus = POL_radicalize_the_front
-						has_completed_focus = POL_organize_the_peasants_strike
-					}
-				}
-			}
+			always = no
 		}
 		available = { 
 			has_government = neutrality
@@ -9416,37 +9386,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2.5
 		}
-		allow_branch = {
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_radicalize_the_front
-						has_completed_focus = POL_rewrite_1935_constitution
-					}
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 		
-		offset = {
-			x = -34 #moved further right by ported r56 branches
-			y = 0
-			trigger = {
-				has_completed_focus = POL_assemble_the_regency_council
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
+		#offset = {
+		#	x = -34 #moved further right by ported r56 branches
+		#	y = 0
+		#	trigger = {
+		#		has_completed_focus = POL_assemble_the_regency_council
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#	}
+		#}
 
 		available_if_capitulated = yes
 
@@ -10800,24 +10754,8 @@ focus_tree = {
 			factor = 2.5
 		}
 		
-		allow_branch = {
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_radicalize_the_front
-						has_completed_focus = POL_rewrite_1935_constitution
-					}
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 		
 		available = {
@@ -11180,24 +11118,8 @@ focus_tree = {
 		prerequisite = { focus = POL_assert_western_claims focus = POL_claim_russia }
 		relative_position_id = POL_assert_western_claims
 		
-		allow_branch = {
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_radicalize_the_front
-						has_completed_focus = POL_rewrite_1935_constitution
-					}
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 
 		x = 0
@@ -12991,104 +12913,12 @@ focus_tree = {
 	focus = {
 		id = POL_Evacuate_Polands_Gold_Reserves
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 14
+		x = 6
 		y = 0
-		relative_position_id = POL_assemble_the_regency_council
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_country_flag = romanov_enabled
-			}
-		}
-		offset = {
-			x = -28
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-		}
-		
-		offset = {
-			x = -27
-			y = 0
-			trigger = {
-				has_dlc = "No Step Back"
-				has_completed_focus = POL_complete_april_constitution
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
+		relative_position_id = POL_complete_april_constitution
 
-		offset = {	#new, 2
-			x = -6
-			y = 0
-			trigger = {
-				NOT = {
-					has_dlc = "No Step Back"
-				}
-				has_completed_focus = POL_complete_april_constitution
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		
-		offset = {
-			x = -19
-			y = 0
-			trigger = {
-				has_completed_focus = POL_organize_the_peasants_strike
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
+		#offsets not needed for hist.
 
-		offset = { #new
-			x = -43
-			y = 0
-			trigger = {
-				has_completed_focus = POL_radicalize_the_front
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_dlc = "No Step Back"
-			}
-		}
-
-		offset = { #new, 2
-			x = -22
-			y = 0
-			trigger = {
-				has_completed_focus = POL_radicalize_the_front
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = {
-					has_dlc = "No Step Back"
-				}
-			}
-		}
-
-		offset = { #new
-			x = -20
-			y = 0
-			trigger = {
-				has_dlc = "No Step Back"
-				has_completed_focus = POL_rewrite_1935_constitution
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
 		cost = 7.2
 
 		ai_will_do = {
@@ -17690,16 +17520,8 @@ focus_tree = {
 			factor = 2.5
 		}
 
-		allow_branch = {
-			has_dlc = "No Step Back"
-			NOT = {	#visibility check
-				OR = {
-					has_completed_focus = POL_complete_april_constitution
-					has_completed_focus = POL_assemble_the_regency_council
-					has_completed_focus = POL_radicalize_the_front
-					has_completed_focus = POL_organize_the_peasants_strike
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 
 		available = {
@@ -17731,16 +17553,8 @@ focus_tree = {
 			factor = 2.5
 		}
 
-		allow_branch = {
-			has_dlc = "No Step Back"
-			NOT = {	#visibility check
-				OR = {
-					has_completed_focus = POL_complete_april_constitution
-					has_completed_focus = POL_assemble_the_regency_council
-					has_completed_focus = POL_radicalize_the_front
-					has_completed_focus = POL_organize_the_peasants_strike
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 
 		available = {
@@ -17873,16 +17687,8 @@ focus_tree = {
 			factor = 2.5
 		}
 
-		allow_branch = {
-			has_dlc = "No Step Back"
-			NOT = {	#visibility check
-				OR = {
-					has_completed_focus = POL_complete_april_constitution
-					has_completed_focus = POL_assemble_the_regency_council
-					has_completed_focus = POL_radicalize_the_front
-					has_completed_focus = POL_organize_the_peasants_strike
-				}
-			}
+		allow_branch = { #new check
+			always = no
 		}
 		
 		select_effect = { #Determine countries to be valid when the focus starts. Avoid fustration with Belgium dipping to 19 fascist support or something.
@@ -19086,8 +18892,8 @@ focus_tree = {
 		prerequisite = { focus = POL_dissolve_the_bbwr focus = POL_Interventionist_Foreign_Policy  }
 		mutually_exclusive = { focus = POL_Align_With_Kaiserreich }
 		
-		x = 0
-		y = 3
+		x = -4
+		y = 1
 
 		offset = { #new, edit 3
 			x = -9
@@ -19100,7 +18906,7 @@ focus_tree = {
 				}
 			}
 		}
-		relative_position_id = POL_Interventionist_Foreign_Policy
+		relative_position_id = POL_dissolve_the_bbwr
 		cost = 5
 
 		ai_will_do = {
@@ -19528,6 +19334,9 @@ focus_tree = {
 				is_faction_leader = yes
 				is_in_faction_with = JAP
 			}
+		}
+		allow_branch = {
+			always = no
 		}
 		bypass = {
 			SOV = { 

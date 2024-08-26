@@ -3843,8 +3843,9 @@ focus_tree = {
 	focus = {
 		id = AUS_establish_the_foreign_ministry
 		icon = GFX_goal_generic_foreign_diplomacy
-		x = 46
-		y = 0
+		relative_position_id = AUS_subsidize_steyr_werke_arms
+		x = 6
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -3856,7 +3857,6 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 150
-			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3872,19 +3872,7 @@ focus_tree = {
 			focus = AUS_no_more_tyrants
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_pro_austrian_propoganda
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-				}
-			}
+			always = no
 		}
 		offset = {
 			x = 2
@@ -3928,20 +3916,7 @@ focus_tree = {
 			focus = AUS_no_more_tyrants
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_repeal_the_abolition_of_nobility
-					#has_completed_focus = AUS_pro_austrian_propoganda
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-				}
-			}
+			always = no
 		}
 		
 		offset = {
@@ -3984,8 +3959,9 @@ focus_tree = {
 		id = AUS_defence_of_the_homeland
 		icon = GFX_goal_AUS_defence_of_the_fatherland
 		prerequisite = { focus = AUS_establish_the_foreign_ministry }
-		x = 42
-		y = 3
+		relative_position_id = AUS_establish_the_foreign_ministry
+		x = -2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 0
@@ -4157,21 +4133,7 @@ focus_tree = {
 			focus = AUS_dissociate_austrofascism_from_nazism
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_repeal_the_abolition_of_nobility
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-					has_completed_focus = AUS_dissociate_austrofascism_from_nazism
-
-				}
-			}
+			always = no
 		}
 		
 		offset = {
@@ -4268,20 +4230,7 @@ focus_tree = {
 			focus = AUS_the_austrian_compromise
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_repeal_the_abolition_of_nobility
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-					has_completed_focus = AUS_the_austrian_compromise
-				}
-			}
+			always = no
 		}
 		
 		offset = {
@@ -6358,19 +6307,7 @@ focus_tree = {
 		id = AUS_imperial_ambitions
 		icon = GFX_goal_hungary_reclaim_the_empire
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-					has_completed_focus = AUS_dissociate_austrofascism_from_nazism
-				}
-			}
+			always = no
 		}
 		offset = {
 			x = 5
@@ -7620,19 +7557,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-					has_completed_focus = AUS_dissociate_austrofascism_from_nazism
-				}
-			}
+			always = no
 		}
 		
 		available = {
@@ -7766,20 +7691,7 @@ focus_tree = {
 			#focus = AUS_no_more_tyrants
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_repeal_the_abolition_of_nobility
-					has_completed_focus = AUS_pro_austrian_propoganda
-					has_completed_focus = AUS_organise_local_raterepubliks
-					#has_completed_focus = AUS_no_more_tyrants
-				}
-			}
+			#not needed in hist
 		}
 		
 		offset = {
@@ -7793,7 +7705,8 @@ focus_tree = {
 				has_completed_focus = AUS_no_more_tyrants
 			}
 		}
-		x = 69
+		relative_position_id = AUS_establish_the_foreign_ministry
+		x = 0
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -8247,20 +8160,7 @@ focus_tree = {
 			focus = AUS_no_more_tyrants
 		}
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = AUS_repeal_the_abolition_of_nobility
-					has_completed_focus = AUS_pro_austrian_propoganda
-					#has_completed_focus = AUS_organise_local_raterepubliks
-					has_completed_focus = AUS_no_more_tyrants
-				}
-			}
+			always = no
 		}
 		
 		offset = {
