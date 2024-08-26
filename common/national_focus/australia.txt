@@ -2650,6 +2650,9 @@ focus_tree = {
 		x = 3
 		y = 0
 		relative_position_id = AST_R56_reaffirm_commonwelth_commitments
+		allow_branch = {
+			always = no
+		}
 		mutually_exclusive = {
 			focus = AST_R56_third_time_lucky
 			focus = AST_R56_royalist_propoganda
@@ -3325,6 +3328,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = AST_R56_dreams_of_a_republic
 
+		allow_branch = {
+			always = no
+		}
+
 		cost = 5
 
 		ai_will_do = {
@@ -3682,6 +3689,10 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = AST_R56_strengthen_the_coalition
+
+		allow_branch = {
+			always = no
+		}
 
 		cost = 5
 
@@ -4411,6 +4422,10 @@ focus_tree = {
 			focus = AST_R56_australia_first
 			focus = AST_R56_reaffirm_commonwelth_commitments
 			focus = AST_R56_dreams_of_a_republic
+		}
+
+		allow_branch = {
+			always = no
 		}
 
 		cost = 10
@@ -5455,6 +5470,10 @@ focus_tree = {
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 
+		allow_branch = {
+			always = no
+		}
+
 		completion_reward = {
 			add_timed_idea = { idea = AST_R56_australia_first_idea days = 365 }
 			custom_effect_tooltip = available_political_advisor
@@ -6245,6 +6264,10 @@ focus_tree = {
 			}
 		}
 
+		allow_branch = {
+			always = no
+		}
+
 		available = {
 			is_subject_of = ENG
 		}
@@ -6813,6 +6836,10 @@ focus_tree = {
 				}
 			   factor = 10
 			}
+		}
+		
+		allow_branch = {
+			always = no
 		}
 
 		available = {
