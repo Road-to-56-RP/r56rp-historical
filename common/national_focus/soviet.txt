@@ -8039,7 +8039,7 @@ focus_tree = {
 		id = SOV_the_centre
 		icon = GFX_goal_stalin
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = -8
+		x = -3
 		y = 1
 		offset = {
 			x = 8
@@ -8969,6 +8969,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
 		cost = 5
+		allow_branch = {
+			always = no
+		}
 
 		mutually_exclusive = {
 			focus = SOV_stalins_cult_of_personality
@@ -9049,6 +9052,9 @@ focus_tree = {
 			focus = SOV_military_chairman
 			focus = SOV_prolong_the_stalin_legacy
 		}
+		allow_branch = {
+			always = no
+		}
 		x = -2
 		y = 1
 		relative_position_id = SOV_freedom_of_debate_unity_of_action
@@ -9078,6 +9084,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SOV_forge_new_future
 			focus = SOV_prolong_the_stalin_legacy
+		}
+		allow_branch = {
+			always = no
 		}
 		x = 0
 		y = 1
@@ -9175,6 +9184,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SOV_forge_new_future
 			focus = SOV_military_chairman
+		}
+		allow_branch = {
+			always = no
 		}
 		available = { has_global_flag = stalin_dead }
 		
@@ -9903,8 +9915,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			always = false
-
+			always = no
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -10856,6 +10867,9 @@ focus_tree = {
 		prerequisite = { focus = SOV_world_revolution }
 		x = 0
 		y = 2
+		allow_branch = {
+			always = no
+		}
 		relative_position_id = SOV_world_revolution
 
 		cost = 5
@@ -11430,7 +11444,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_bukharinists
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
 		allow_branch = { 
-			always = false
+			always = no
 		}
 		mutually_exclusive = { focus = SOV_the_left_opposition focus = SOV_the_centre}
 		x = 15
@@ -11693,6 +11707,9 @@ focus_tree = {
 				}
 			}
 			
+		}
+		allow_branch = {
+			always = no
 		}
 		allow_branch = {
 			has_dlc = "La Resistance"
@@ -13416,73 +13433,9 @@ focus_tree = {
 		id = SOV_addressing_internal_affairs
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 24
+		x = 4
 		y = 1
-		offset = {
-			x = -7
-			y = 0
-			trigger = { #Basic offset to compensate for missing Bukharinist branch
-				NOT = { has_dlc = "No Step Back" }
-			}
-		}
-		offset = {
-			x = -19
-			y = 0
-			trigger = { #Trotskyist branch hides
-				NOT = { has_dlc = "No Step Back" }
-				has_completed_focus = SOV_the_centre 
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = -7
-			y = 0
-			trigger = { # Stalinist branch hides
-				NOT = { has_dlc = "No Step Back" }
-				has_completed_focus = SOV_the_left_opposition
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				has_dlc = "No Step Back"
-				has_completed_focus = SOV_the_centre
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-		offset = {
-			x = -7
-			y = 0
-			trigger = {
-				has_dlc = "No Step Back"
-				OR = {
-					AND = {
-						has_completed_focus = SOV_the_left_opposition
-						has_completed_focus = SOV_left_opposition_coup
-					}
-					AND = {
-						has_completed_focus = SOV_the_right_opposition
-						has_completed_focus = SOV_coup_detat
-					}
-				}
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
-
+		
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
@@ -14566,6 +14519,9 @@ focus_tree = {
 				has_civil_war = yes
 			}	
 		}
+		allow_branch = {
+			always = no
+		}
 		
 		mutually_exclusive = { focus = SOV_policy_of_collective_security }
 		
@@ -14924,6 +14880,9 @@ focus_tree = {
 				has_civil_war = yes
 			}	
 		}
+		allow_branch = {
+			always = no
+		}
 		
 		available = {
 			NOT = { has_government = democratic }
@@ -15146,13 +15105,143 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = SOV_recover_alaska
+		icon = GFX_goal_r56rp_cp_reclaim_alaska_brammeke
+		prerequisite = { focus = SOV_the_fight_for_the_pacific }
+		x = 0
+		y = 1
+		relative_position_id = SOV_the_fight_for_the_pacific
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 0
+				USA = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}				
+		}
+		
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+		}
+
+		bypass = {
+			463 = { is_owned_by = ROOT }
+			650 = { is_owned_by = ROOT }
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			if = {
+				limit = {
+					463 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 463
+			}
+			if = {
+				limit = {
+					650 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 650
+			}
+
+			if = { #ONE CONTROLLER
+				limit = {
+					463 = {
+						controller = {
+							controls_state = 650
+						}
+					}
+				}
+				if = {
+					limit = {
+						463 = {
+							controller = {
+								NOT = { has_war_with = ROOT }
+							}
+						}
+					}
+					463 = {
+						controller = {
+							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
+							custom_effect_tooltip = if_they_accept
+							effect_tooltip = {
+								ROOT = { transfer_state = 463 } #ALASKA
+								ROOT = { transfer_state = 650 } #ATTU ISLAND
+								add_opinion_modifier = {
+									target = ROOT
+									modifier = SOV_pressured_our_government
+								}
+							}
+						}
+					}
+				}
+			}
+			else = { #TWO DIFFERENT CONTROLLERS
+				if = {
+					limit = {
+						463 = {
+							controller = {
+								NOT = { has_war_with = ROOT }
+							}
+						}
+					}
+					463 = {
+						controller = {
+							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
+							custom_effect_tooltip = if_they_accept
+							effect_tooltip = {
+								ROOT = { transfer_state = 463 } #ALASKA
+								add_opinion_modifier = {
+									target = ROOT
+									modifier = SOV_pressured_our_government
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						650 = {
+							controller = {
+								NOT = { has_war_with = ROOT }
+							}
+						}
+					}
+					650 = {
+						controller = {
+							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
+							custom_effect_tooltip = if_they_accept
+							effect_tooltip = {
+								ROOT = { transfer_state = 650 } #ATTU ISLAND
+								add_opinion_modifier = {
+									target = ROOT
+									modifier = SOV_pressured_our_government
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = SOV_baltic_security
 		icon = GFX_goal_r56rp_cp_baltic_security_trun
 		prerequisite = { focus = SOV_the_comintern }
-		x = 3
+		x = -1
 		y = -1
 		relative_position_id = SOV_anti_capitalist_policies
 		cost = 5
@@ -15251,7 +15340,50 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = SOV_respect_baltic_self_determination
+		icon = GFX_goal_SOV_true_baltic_freedom
+		prerequisite = { focus = SOV_baltic_security }
+		x = -1
+		y = 1
+		relative_position_id = SOV_baltic_security
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		allow_branch = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = SOV_claims_in_baltic }
+
+		bypass = {
+			NOT = {
+				country_exists = EST
+				country_exists = LAT
+				country_exists = LIT
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+		}
+
+		completion_reward = {
+			activate_targeted_decision = { target = EST decision = SOV_promote_ideology_rallies_baltic }
+			activate_targeted_decision = { target = LAT decision = SOV_promote_ideology_rallies_baltic }
+			activate_targeted_decision = { target = LIT decision = SOV_promote_ideology_rallies_baltic }
+			activate_targeted_decision = { target = EST decision = SOV_pressure_country_government_baltic }
+			activate_targeted_decision = { target = LAT decision = SOV_pressure_country_government_baltic }
+			activate_targeted_decision = { target = LIT decision = SOV_pressure_country_government_baltic }
+		}
+	}
 
 	focus = {
 		id = SOV_claims_in_baltic
@@ -15273,7 +15405,7 @@ focus_tree = {
 			}	
 		}
 
-		
+		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -15323,10 +15455,10 @@ focus_tree = {
 	focus = {
 		id = SOV_secure_leningrad
 		icon = GFX_focus_fin_karjala_question
-		prerequisite = { focus = SOV_baltic_security }
-		x = -1
+		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
+		x = 0
 		y = 1
-		relative_position_id = SOV_baltic_security
+		relative_position_id = SOV_respect_baltic_self_determination
 		cost = 10
 		
 		ai_will_do = {
@@ -15373,7 +15505,80 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = SOV_control_scandinavia
+		icon = GFX_goal_r56rp_cp_control_scandanavia_saulgoofball
+		prerequisite = { focus = SOV_secure_leningrad }
+		x = 0
+		y = 1
+		relative_position_id = SOV_secure_leningrad
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		allow_branch = {
+			always = no
+		}
+		
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					exists = yes
+					NOT = { is_in_faction_with = ROOT }
+					capital_scope = { 
+						OR = {
+							region = 13
+							region = 12
+							region = 191
+							region = 192
+							region = 11
+							region = 10
+							region = 9
+							region = 206
+							AND = {
+								region = 6
+								NOT = {
+									state = 57
+									state = 56
+									state = 59
+									state = 58
+								}
+							}
+						}
+					}  
+				}
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}
+				hidden_effect = {
+					country_event = { id = generic.1 }
+				}
+			}
+
+			custom_effect_tooltip = SOV_control_scandinavia_decisions_tt
+			hidden_effect = {
+				activate_targeted_decision = { target = FIN decision = SOV_promote_ideology_rallies_nordic }
+				activate_targeted_decision = { target = SWE decision = SOV_promote_ideology_rallies_nordic }
+				activate_targeted_decision = { target = NOR decision = SOV_promote_ideology_rallies_nordic }
+				activate_targeted_decision = { target = DEN decision = SOV_promote_ideology_rallies_nordic }
+				activate_targeted_decision = { target = FIN decision = SOV_pressure_country_government_nordic }
+				activate_targeted_decision = { target = SWE decision = SOV_pressure_country_government_nordic }
+				activate_targeted_decision = { target = NOR decision = SOV_pressure_country_government_nordic }
+				activate_targeted_decision = { target = DEN decision = SOV_pressure_country_government_nordic }
+			}
+		}
+	}
 
 	focus = {
 		id = SOV_claims_on_poland
@@ -15382,7 +15587,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_claims_in_baltic
-		cost = 1
+		cost = 10
 		
 		ai_will_do = {
 			factor = 10
@@ -15488,9 +15693,254 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = SOV_demand_eastern_poland
+		icon = GFX_goal_POL_lose_the_east
+		prerequisite = { focus = SOV_claims_on_poland }
+		x = -1
+		y = 2
+		relative_position_id = SOV_claims_on_poland
+		cost = 10
+		allow_branch = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
 
-	
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 20
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 25
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality > 30
+			}
+			modifier = {
+				factor = 0.1
+				ai_irrationality > 35
+			}
+		}
+
+		mutually_exclusive = { focus = SOV_offer_poland_protection }
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+			NOT =  { is_in_faction_with = POL }
+			NOT = { has_non_aggression_pact_with = POL }
+			NOT = { has_guaranteed = POL }
+			NOT = { has_war_with = POL }
+			OR = {
+				96 = { is_owned_and_controlled_by = POL }
+				95 = { is_owned_and_controlled_by = POL }
+				94 = { is_owned_and_controlled_by = POL }
+				93 = { is_owned_and_controlled_by = POL }
+				91 = { is_owned_and_controlled_by = POL }
+				89 = { is_owned_and_controlled_by = POL }
+				935 = { is_owned_and_controlled_by = POL }
+				936 = { is_owned_and_controlled_by = POL }
+			}
+		}
+		
+		bypass = {
+			OR = {
+				AND = { #North to south intentionally excluding Vilnius
+					owns_state = 96
+					owns_state = 936
+					owns_state = 935
+					owns_state = 95
+					owns_state = 94
+					owns_state = 93
+					owns_state = 91
+					owns_state = 89
+				}
+				NOT = {
+					96 = { is_owned_and_controlled_by = POL }
+					95 = { is_owned_and_controlled_by = POL }
+					94 = { is_owned_and_controlled_by = POL }
+					93 = { is_owned_and_controlled_by = POL }
+					91 = { is_owned_and_controlled_by = POL }
+					89 = { is_owned_and_controlled_by = POL }
+					935 = { is_owned_and_controlled_by = POL }
+					936 = { is_owned_and_controlled_by = POL }
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_named_threat = { threat = 2 name = SOV_demand_eastern_poland }
+			POL = {
+				country_event = { id = poland.2 }
+				custom_effect_tooltip = needs_approval
+			}
+			effect_tooltip = {
+				SOV = {
+					if = {
+						limit = { POL = { owns_state = 96 controls_state = 96 } }
+						transfer_state = 96
+					}
+					if = {
+						limit = { POL = { owns_state = 95 controls_state = 95 } }
+						transfer_state = 95
+					}
+					if = {
+						limit = { POL = { owns_state = 94 controls_state = 94 } }
+						transfer_state = 94
+					}
+					if = {
+						limit = { POL = { owns_state = 93 controls_state = 93 } }
+						transfer_state = 93
+					}
+					if = {
+						limit = { POL = { owns_state = 91 controls_state = 91 } }
+						transfer_state = 91
+					}
+					if = {
+						limit = { POL = { owns_state = 89 controls_state = 89 } }
+						transfer_state = 89
+					}
+					if = {
+						limit = { POL = { owns_state = 784 controls_state = 784 } }
+						transfer_state = 784
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_offer_poland_protection
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = { focus = SOV_claims_on_poland }
+		x = 1
+		y = 2
+		relative_position_id = SOV_claims_on_poland
+		cost = 10
+		allow_branch = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 24
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 20
+			}
+			modifier = {
+				factor = 0.5
+				ai_irrationality < 15
+			}
+			modifier = {
+				factor = 0.1
+				ai_irrationality < 10
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			country_exists = POL
+			NOT = { has_war_with = POL }
+			POL = {
+				SOV_is_valid_subject = yes
+				has_capitulated = no
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			POL = { #focus to cede should be readded for them sometime
+				is_subject_of = SOV
+			}
+		}
+
+		mutually_exclusive = { focus = SOV_demand_eastern_poland }
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_ai_strategy = {
+				type = alliance
+				id = POL
+				value = 100
+			}
+			POL = {
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = 100
+				}
+				country_event = { id = poland.5 }
+				custom_effect_tooltip = needs_approval
+				effect_tooltip = {
+					add_state_claim = 5
+					add_state_claim = 63
+					add_state_claim = 68
+					add_state_claim = 66
+					add_state_claim = 67
+					custom_effect_tooltip = SOV_offer_poland_protection_tt
+					#This will also make Poland and Soviet be more more keen on cooperating
+				}
+			}
+			effect_tooltip = {
+				SOV = {
+					if = {
+						limit = { POL = { owns_state = 96 controls_state = 96 } }
+						transfer_state = 96
+					}
+					if = {
+						limit = { POL = { owns_state = 95 controls_state = 95 } }
+						transfer_state = 95
+					}
+					if = {
+						limit = { POL = { owns_state = 94 controls_state = 94 } }
+						transfer_state = 94
+					}
+					if = {
+						limit = { POL = { owns_state = 93 controls_state = 93 } }
+						transfer_state = 93
+					}
+					if = {
+						limit = { POL = { owns_state = 91 controls_state = 91 } }
+						transfer_state = 91
+					}
+					if = {
+						limit = { POL = { owns_state = 89 controls_state = 89 } }
+						transfer_state = 89
+					}
+					if = {
+						limit = { POL = { owns_state = 784 controls_state = 784 } }
+						transfer_state = 784
+					}
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = SOV_claim_on_bessarabia
@@ -15499,7 +15949,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SOV_invite_romania
 		}		
-		x = 3
+		x = 0
 		y = 1
 		relative_position_id = SOV_claims_on_poland
 		cost = 5
@@ -15578,15 +16028,326 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
-	
+	focus = {
+		id = SOV_invite_romania
+		icon = GFX_goal_ROM_appoint_pro_soviet_government
+		prerequisite = { focus = SOV_claims_on_poland }
+		mutually_exclusive = {
+			focus = SOV_claim_on_bessarabia
+		}
+		x = 5
+		y = 1
+		relative_position_id = SOV_claims_on_poland
+		cost = 10
+		allow_branch = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1939.1.1
+					has_civil_war = yes
+				}
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 5
+				ROM = {
+					has_government = communism
+				}	
+			}
+		}
+
+		available = {
+			is_faction_leader = yes
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+			ROM = {
+				is_in_faction = no
+				owns_state = 78
+				OR = {
+					has_government = communism
+					communism > 0.4
+				}
+			}
+		}
+
+		bypass = {
+			ROM = {
+				is_in_faction_with = ROOT
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = yes
+					NOT = { is_in_faction_with = ROM }
+				}
+				ROM = {
+					country_event = { id = generic.5 hours = 8 random_hours = 4 }
+				}
+			}
+			if = {
+				limit = {
+					ROM = {
+						communism > 0.4						
+					}
+				}
+				ROM = {
+					add_popularity = {
+						popularity = 0.05
+						ideology = communism
+					}
+				}
+			}						
+		}
+		search_filters = { FOCUS_FILTER_ALLIANCE }
+	}
+	focus = {
+		id = SOV_demand_balkan_submission
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = { focus = SOV_claim_on_bessarabia focus = SOV_invite_romania }
+		x = 0
+		y = 1
+		relative_position_id = SOV_claim_on_bessarabia
+		cost = 10
+		allow_branch = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		
+		mutually_exclusive = { focus = SOV_seek_balkan_cooperation }
+		
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			any_other_country = {
+				BUL_is_balkan_nation = yes
+			}
+			is_subject = no
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					BUL_is_balkan_nation = yes
+				}
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}
+				hidden_effect = {
+					country_event = { id = generic.1 }
+				}
+			}
+			custom_effect_tooltip = SOV_demand_balkan_submission_decisions_tt
+			hidden_effect = {
+				activate_targeted_decision = { target = ROM decision = SOV_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = BUL decision = SOV_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = GRE decision = SOV_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = YUG decision = SOV_send_ultimatum_to_country_balkan }
+				activate_targeted_decision = { target = TUR decision = SOV_send_ultimatum_to_country_balkan }
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_seek_balkan_cooperation
+		icon = GFX_focus_BUL_free_balkan_states
+		prerequisite = { focus = SOV_claim_on_bessarabia focus = SOV_invite_romania }
+		x = 2
+		y = 1
+		relative_position_id = SOV_claim_on_bessarabia
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		allow_branch = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = SOV_demand_balkan_submission }
+		
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			any_other_country = {
+				BUL_is_balkan_nation = yes
+			}
+			is_subject = no
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					BUL_is_balkan_nation = yes
+				}
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 365
+				}
+				hidden_effect = {
+					country_event = { id = generic.1 }
+				}
+			}
+			custom_effect_tooltip = SOV_seek_balkan_cooperation_decisions_tt
+			hidden_effect = {
+				activate_targeted_decision = { target = ROM decision = SOV_pressure_country_government_balkan }
+				activate_targeted_decision = { target = BUL decision = SOV_pressure_country_government_balkan }
+				activate_targeted_decision = { target = GRE decision = SOV_pressure_country_government_balkan }
+				activate_targeted_decision = { target = YUG decision = SOV_pressure_country_government_balkan }
+				activate_targeted_decision = { target = TUR decision = SOV_pressure_country_government_balkan }
+				activate_targeted_decision = { target = ROM decision = SOV_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = BUL decision = SOV_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = GRE decision = SOV_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = YUG decision = SOV_promote_ideology_rallies_balkan }
+				activate_targeted_decision = { target = TUR decision = SOV_promote_ideology_rallies_balkan }
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_claim_on_the_straits
+		icon = GFX_goal_SOV_supremacy_on_the_bosporus
+		prerequisite = {  focus = SOV_demand_balkan_submission focus = SOV_seek_balkan_cooperation }
+		x = 1
+		y = 1
+		relative_position_id = SOV_demand_balkan_submission
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch = {
+			always = no
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				AND = {
+					OR = {
+						owns_state = 341
+						341 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 347
+						347 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 340
+						340 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 339
+						339 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 797
+						797 = { is_claimed_by = ROOT }
+					}					
+				}
+				TUR = {
+					owns_state = 797
+					owns_state = 341
+					owns_state = 347
+					owns_state = 340
+					OR = {
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+					}	
+					
+				}
+			}
+
+		}
+		completion_reward = {
+			add_state_claim = 341
+			add_state_claim = 347
+			add_state_claim = 340
+			add_state_claim = 339
+			add_state_claim = 797
+			add_named_threat = { threat = 2 name = SOV_claim_on_the_straits }
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+					OR = {
+						controls_state = 341
+						controls_state = 347
+						controls_state = 340
+						controls_state = 339
+						controls_state = 797
+					}
+				}
+				SOV = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						expire = 0
+					}
+				}
+			}	
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
 	
 
-	
+	focus = {
+		id = SOV_ultimatum_to_greece
+		icon = GFX_goal_italy_attack_greece
+		prerequisite = { focus = SOV_claim_on_the_straits }
+		x = 0
+		y = 1
+		relative_position_id = SOV_claim_on_the_straits
+		cost = 7.16
 
-	
-	
-
-	
+		available = {
+			is_subject = no
+			all_state = {
+				OR = {
+					NOT = {
+						OR = {
+							state = 341
+							state = 347
+							state = 340
+							state = 339
+						}
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+		}
+		bypass = {
+			187 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_named_threat = { threat = 1 name = SOV_ultimatum_to_greece_t }
+			add_state_claim = 187
+			if = {
+				limit = { country_exists = GRE }
+				GRE = { country_event = { id = greece.1 days = 1 } }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
 
 	focus = {
 		id = SOV_middle_east_diplomacy
@@ -15597,8 +16358,9 @@ focus_tree = {
 		relative_position_id = SOV_baltic_security
 		cost = 5
 		allow_branch = {
-			always = false
+			always = no
 		}
+		
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15917,9 +16679,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_middle_east_diplomacy
 		cost = 5
-		allow_branch = {
-			always = false
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -15927,6 +16686,9 @@ focus_tree = {
 				factor = 0
 				has_civil_war = yes
 			}	
+		}
+		allow_branch = {
+			always = no
 		}
 		
 		mutually_exclusive = { focus = SOV_reconcile_japan }
@@ -15974,6 +16736,232 @@ focus_tree = {
 			unlock_decision_category_tooltip = r56_chinese_gui_category
 			set_country_flag = chi_interested_in_china
 		}
+	}
+
+	focus = {
+		id = SOV_the_gobi_gambit
+		icon = GFX_focus_generic_befriend_sinkiang
+		prerequisite = { focus = SOV_the_comintern }
+		x = 13
+		y = 1
+		relative_position_id = SOV_the_comintern
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		allow_branch = {
+			always = no
+		}
+		
+
+		available = {
+			#SOV controls the states in which railway lines will be built
+			controls_state = 405 #TASHKENT
+			controls_state = 404 #KYZYL ORDA
+			controls_state = 732 #PAMIR
+			controls_state = 586 #ALMA-ATA
+
+			OR = {
+				AND = { #Relevant states under Soviet control
+					controls_state = 617 #URUMQI
+					controls_state = 618 #DZUNGARIA
+				}
+				SIK = { #Relevant states under Sinkiang control
+					NOT = { has_war_with = ROOT }
+					controls_state = 617 #URUMQI
+					controls_state = 618 #DZUNGARIA
+				}
+			}
+
+			is_subject = no
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL FOCUS_FILTER_ALLIANCE }
+		completion_reward = {
+			hidden_effect = { #Decrease SIK's desire to join Chinese faction (and other AI strategies)
+				SOV_approach_sinkiang_diplomacy_effect = yes
+				SIK = {
+					add_ai_strategy = { #This is added in Gobi Gambit + all 3 investment decisions
+						type = alliance
+						id = SOV		
+						value = 4
+					}
+				}
+			}
+			if = { #If SOV controls the relevant states (for whatever weird reason -.-), then insta-build
+				limit = {
+					controls_state = 617 #URUMQI
+					controls_state = 618 #DZUNGARIA
+				}
+				# Tashkent - Frunze - Alma-Ata - Urumqi
+				build_railway = {
+					path = { 1459 10148 10366 12397 12340 12640 7706 12583 4224 1591 10547 10619 12529 7866 1783 10674 4709 } #1840 12526 4770 4709
+				}
+				#Supply Hub in Alma-Ata
+				586 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 1591
+						instant_build = yes
+					}
+				}
+				custom_effect_tooltip = SOV_sinkiang_decisions_available_tt
+			}
+			else = { #If SIK in control of them
+				SIK = { country_event = { id = NSB_soviet_foreign_politics_events.270 hours = 6 random_hours = 6 } }
+				# IF THEY ACCEPT
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					add_opinion_modifier = {
+						target = SIK
+						modifier = SOV_complied_with_our_demands
+					}
+					
+					# Tashkent - Frunze - Alma-Ata - Urumqi
+					build_railway = {
+						path = { 1459 10148 10366 12397 12340 12640 7706 12583 4224 1591 10547 10619 12529 7866 1783 10674 4709 }
+					}
+					#Supply Hub in Alma-Ata
+					586 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							province = 1591
+							instant_build = yes
+						}
+					}
+					custom_effect_tooltip = SOV_sinikiang_influence_cg_tt_sov
+					custom_effect_tooltip = SOV_sinkiang_decisions_available_tt
+				}
+				# IF THEY REFUSE
+				custom_effect_tooltip = if_they_refuse_tt
+				effect_tooltip = {
+					add_opinion_modifier = {
+						target = SIK
+						modifier = SOV_rejected_our_demands
+					}
+					# Tashkent - Frunze - Alma-Ata
+					build_railway = {
+						path = { 1459 10148 10366 12397 12340 12640 7706 12583 4224 1591 }
+					}
+					#Supply Hub in Alma-Ata
+					586 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							province = 1591
+							instant_build = yes
+						}
+					}
+					custom_effect_tooltip = SOV_sinikiang_influence_refuse_tt
+				}
+			}
+			custom_effect_tooltip = SOV_volunteers_allowed_sinkiang_tt
+		}
+	}
+
+	
+	focus = {
+		id = SOV_into_the_plateau
+		icon = GFX_goal_TIB_monasteries_crushed
+		prerequisite = { focus = SOV_the_gobi_gambit }
+		x = 0
+		y = 1
+		relative_position_id = SOV_the_gobi_gambit
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				AND = {
+					759 = { is_controlled_by = SOV }
+					287 = { is_controlled_by = SOV }
+				}
+				AND = {
+					SIK = {
+						is_subject_of = SOV
+					}
+					759 = { is_controlled_by = SIK }
+					287 = { is_controlled_by = SIK }
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				AND = {
+					NOT = {
+						country_exists = TIB
+						country_exists = NEP
+						country_exists = BHU
+					}
+					OR = {
+						owns_state = 322
+						322 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 758
+						758 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 757
+						757 = { is_claimed_by = ROOT }
+					}
+					OR = {
+						owns_state = 324
+						324 = { is_claimed_by = ROOT }
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_named_threat = { threat = 1 name = SOV_into_the_plateau_t }
+			add_state_claim = 322
+			add_state_claim = 758
+			add_state_claim = 757
+			add_state_claim = 601
+			add_state_claim = 324
+			add_state_claim = 323
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+					OR = {
+						controls_state = 322
+						controls_state = 758
+						controls_state = 757
+						controls_state = 601
+						controls_state = 324
+						controls_state = 323
+					}
+				}
+				SOV = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						expire = 0
+					}
+				}
+			}
+			#add_ai_strategy = {
+			#	type = antagonize
+			#	id = "TIB"			
+			#	value = 200
+			#}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -16418,16 +17406,15 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_the_threat_from_the_land_of_the_rising_sun
 		cost = 10
-
+		allow_branch = {
+			always = no
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
 				has_civil_war = yes
 			}	
-		}
-		allow_branch = {
-			always = false
 		}
 		
 		mutually_exclusive = { focus = SOV_the_threat_from_the_land_of_the_rising_sun }
@@ -16644,6 +17631,9 @@ focus_tree = {
 				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 		}
+		allow_branch = {
+			always = no
+		}
 		offset = {
 			x = -10
 			y = 0
@@ -16656,7 +17646,16 @@ focus_tree = {
 			}
 		}
 		allow_branch = { 
-			always = false
+			has_dlc = "No Step Back" 
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
+			}
 		}
 		mutually_exclusive = { focus = SOV_the_path_of_marxism_leninism }
 
@@ -18018,6 +19017,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		allow_branch = {
+			always = no
+		}
 		offset = {
 			x = -12
 			y = 0
@@ -18042,7 +19044,16 @@ focus_tree = {
 		}
 		
 		allow_branch = { 
-			always = false
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SOV_solidify_the_provisional_government }
+				NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
+			}
 		}
 		
 		available = { 
@@ -18089,6 +19100,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		allow_branch = {
+			always = no
+		}
 
 		offset = {
 			x = -12
@@ -18113,7 +19127,16 @@ focus_tree = {
 			}
 		}
 		allow_branch = { 
-			always = false
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = SOV_reconvene_the_zemsky_sobor }
+				NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
+			}
 		}
 
 		available = {
@@ -26230,7 +27253,9 @@ focus = {
 		x = 4
 		y = 6
 		relative_position_id = SOV_the_comintern
-
+		allow_branch = {
+			always = no
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -26258,9 +27283,6 @@ focus = {
 				}
 				has_global_flag = r56_ww2_got_done_early_make_ai_move_toward_ww3
 			}
-		}
-		allow_branch = {
-			always = false
 		}
 
 		available = {
