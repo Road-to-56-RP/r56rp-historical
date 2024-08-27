@@ -144,7 +144,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_a_great_spain }
 		
 		icon = GFX_focus_generic_concessions
-		x = -15
+		x = 0
 		y = 1
 		offset = {
 			x = 15
@@ -445,6 +445,9 @@ focus_tree = {
 #  # ### #     ##  ###  ### ###  ##  #  # #  #     ###   ##  ### ### ###      ##  #    
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPR_the_popular_front
 		available = {
 			NOT = {
@@ -738,6 +741,9 @@ focus_tree = {
 #  # #  #  #  ###  ##  #  # #  # ### ### ##   #  ##             #   #  # ##   ##  ### ##   #  ##  
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_the_phalanx_ascendant
 		available = {
 			has_global_flag = spanish_civil_war
@@ -2084,6 +2090,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_equip_the_new_armada
 		prerequisite = { focus = SPA_improve_domestic_naval_facilities }
 		icon = GFX_goal_generic_admirality
@@ -4429,6 +4438,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_join_the_allies
 		available = {
 			has_global_flag = scw_over
@@ -4504,6 +4516,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_ally_the_french
 		mutually_exclusive = { focus = SPA_join_the_axis }
 		available = {
@@ -5830,6 +5845,9 @@ focus_tree = {
 #  # #  #  #  ###  ##  #  # #  # ### ### ##   #  ##              ##  #  # #  # ### ### ##   #  ##  
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_supremacy_of_the_communion
 		available = {
 			has_global_flag = spanish_civil_war
@@ -7772,6 +7790,9 @@ focus_tree = {
 		}
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPA_naval_equipment
 		prerequisite = { focus = SPA_a_fleet_worthy_of_a_king }
 		icon = GFX_goal_generic_admirality
@@ -12588,6 +12609,9 @@ focus_tree = {
 		}
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPR_naval_design_bureau
 		prerequisite = { focus = SPR_slipway_enlargement }
 		icon = GFX_goal_generic_admirality
@@ -14006,6 +14030,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = SPR_naval_equipment
 		prerequisite = { focus = SPR_navy_modernization }
 		icon = GFX_goal_generic_admirality

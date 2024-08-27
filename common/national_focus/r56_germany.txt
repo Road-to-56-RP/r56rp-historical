@@ -1443,19 +1443,9 @@ focus_tree = {
 			focus = GER_kill_hitler
 			focus = GER_rally_the_monarchists
 		}
-		x = 75
+		x = 50
 		y = 0
-		offset = {
-			x = -21
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_denounce_versailles
-			}
-		}
+		
 		ai_will_do = {
 			factor = 75
 			modifier = {

@@ -204,7 +204,7 @@ focus_tree = {
 			focus = FRA_action_francaise
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 15
+		x = 12
 		y = 0
 		offset = {
 			x = -5
@@ -254,6 +254,9 @@ focus_tree = {
 			focus = FRA_status_quo
 			focus = FRA_radicalize_front
 			focus = FRA_action_francaise
+		}
+		allow_branch = {
+			always = no
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
 		x = 25
@@ -309,6 +312,9 @@ focus_tree = {
 			focus = FRA_status_quo
 			focus = FRA_radicalize_front
 			focus = FRA_far_right_leagues
+		}
+		allow_branch = {
+			always = no
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
 		x = 40
@@ -3265,6 +3271,9 @@ focus_tree = {
 			focus = FRA_reynaud_economic_reforms
 			focus = FRA_rearmament_policy
 		}
+		allow_branch = {
+			always = no
+		}
 		relative_position_id = FRA_rearmament_policy
 		cost = 5
 
@@ -4925,6 +4934,9 @@ focus_tree = {
 		available = {
 			neutrality > 0.4
 		}
+		allow_branch = {
+			always = no
+		}
 		x = -5
 		y = 1
 		relative_position_id = FRA_papal_rehabilitation
@@ -5032,6 +5044,9 @@ focus_tree = {
 			focus = FRA_brumaire_movement
 			focus = FRA_support_the_legitimatises
 		}
+		allow_branch = {
+			always = no
+		}
 		available = {
 			neutrality > 0.4
 		}
@@ -5135,6 +5150,9 @@ focus_tree = {
 		}
 		available = {
 			neutrality > 0.4
+		}
+		allow_branch = {
+			always = no
 		}
 		x = 12
 		y = 1
@@ -5399,6 +5417,9 @@ focus_tree = {
 					has_completed_focus = FRA_far_right_leagues
 				}
 			}
+		}
+		allow_branch = {
+			always = no
 		}	
 		
 		ai_will_do = {
@@ -5647,7 +5668,9 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = FRA_support_the_legitimatises
-		
+		allow_branch = {
+			always = no
+		}
 		available = {
 			SPR_scw_in_progress = yes
 			country_exists = SPB
@@ -6534,6 +6557,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_support_the_legitimatises
+		}
+		allow_branch = {
+			always = no
 		}
 		mutually_exclusive = { focus = FRA_anti_german_front }
 		x = -3
@@ -9234,7 +9260,7 @@ focus_tree = {
 	focus = {
 		id = FRA_intervention_in_spain
 		icon = GFX_focus_focus_fra_intervention_spain
-		x = -7
+		x = -11
 		y = 1
 		prerequisite = {
 			focus = FRA_status_quo

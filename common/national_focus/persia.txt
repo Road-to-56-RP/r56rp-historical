@@ -10,6 +10,9 @@ focus_tree = {
 	continuous_focus_position = { x = 45 y = 725 }
 	default = no
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = PER_continue_government_purges
 		icon = GFX_goal_PER_shah_reza_pahlavi_1
 		cost = 10
@@ -58,6 +61,9 @@ focus_tree = {
 
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = PER_restore_constitutionalism
 		icon = GFX_goal_PER_reconstitute_the_guarded_domains 
 		cost = 10
@@ -151,6 +157,9 @@ focus_tree = {
 
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = PER_appoint_zahedi
 		icon = GFX_goal_PER_appoint_zahedi
 		cost = 10
@@ -259,24 +268,8 @@ focus_tree = {
 			add_ideas = PER_adopt_western_style_military_bureaucracy
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 46
+		x = 26
 		y = 0
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = PER_appoint_zahedi
-					has_completed_focus = PER_continue_government_purges
-					has_completed_focus = PER_restore_constitutionalism
-					has_completed_focus = PER_revive_the_jungle_movement
-				}
-			}
-		}
 	}
 
 	focus = {
@@ -650,13 +643,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
-			start_civil_war = {
-				ideology = neutrality
-				size = 0.3
-				#	only_own_territory = yes
-				capital = 412
-				states = { 412  413  410  414 }
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -782,6 +769,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = PER_persian_way_to_socialism
 		icon = GFX_goal_support_fourth_int
 		cost = 5
@@ -3168,6 +3158,9 @@ focus_tree = {
 
 	}
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = PER_control_the_strait
 		icon = GFX_focus_TUR_the_montreux_convention
 		cost = 10
@@ -3267,7 +3260,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PER_align_with_the_soviets
 		}
-		x = 8
+		x = 9
 		y = 6
 			ai_will_do = {
 					factor = 45

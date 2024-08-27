@@ -2574,6 +2574,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = HUN_renew_the_rome_protocols
 		icon = GFX_goal_italy_militarize_the_rome_protocols
 		prerequisite = { focus = HUN_strengthen_fascists }
@@ -2896,7 +2899,7 @@ focus_tree = {
 		icon = GFX_goal_hungary_axis_based_imports
 		prerequisite = { focus = HUN_joint_aluminum_mining_company }
 		mutually_exclusive = { focus = HUN_alliance_with_the_kaiserreich}
-		x = -1
+		x = -0
 		y = 3
 		relative_position_id = HUN_renounce_the_treaty_of_trianon
 
@@ -3099,6 +3102,9 @@ focus_tree = {
 
 	focus = {
 		id = HUN_alliance_with_the_kaiserreich
+		allow_branch = {
+			always = no
+		}
 		available = {
 			OR = {
 				has_government = neutrality

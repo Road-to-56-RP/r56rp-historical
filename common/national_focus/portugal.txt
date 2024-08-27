@@ -104,7 +104,7 @@ focus_tree = {
 
 		icon = GFX_focus_por_luso_tropicalism
 		x = -2
-		y = 2
+		y = 1
 
 		relative_position_id = POR_colonial_assimilation_policy
 		cost = 10
@@ -116,6 +116,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_limited_self_rule
 		available = {
 			OR = {
@@ -2355,6 +2358,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_popular_front
 		mutually_exclusive = { focus = POR_estado_novo}
 		prerequisite = {
@@ -3806,6 +3812,9 @@ focus_tree = {
 #	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_strict_neutrality_in_the_spanish_civil_war
 		available = {
 			SPR_scw_in_progress = yes
@@ -4473,7 +4482,7 @@ focus_tree = {
 		prerequisite = {
 		}
 		icon = GFX_focus_por_estado_novo
-		x = 13
+		x = -5
 		y = 0
 
 		relative_position_id = POR_popular_front
@@ -4557,6 +4566,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_observation_mission
 
 		available = {
@@ -4776,6 +4788,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_strengthen_the_regime
 		available = {
 			has_country_leader = { character = POR_antonio_de_oliveira_salazar }
@@ -5035,6 +5050,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_proudly_alone
 		available = {
 			has_government = neutrality
@@ -5123,7 +5141,7 @@ focus_tree = {
 		mutually_exclusive = { focus = POR_strengthen_the_regime }
 
 		icon = GFX_focus_generic_strike_at_democracy2
-		x = 8
+		x = 4
 		y = 0
 
 		ai_will_do = {
@@ -5301,7 +5319,7 @@ focus_tree = {
 		prerequisite = { focus = POR_camisas_azuis }
 		mutually_exclusive = { focus = POR_the_fifth_empire }
 		icon = GFX_focus_chi_mission_to_germany
-		x = -1
+		x = 0
 		y = 1
 
 		relative_position_id = POR_camisas_azuis
@@ -5346,7 +5364,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = POR_join_the_axis }
 		icon = GFX_goal_generic_scientific_exchange
-		x = -1
+		x = 0
 		y = 1
 
 		relative_position_id = POR_join_the_axis
@@ -5359,6 +5377,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_the_fifth_empire
 		available = {
 			has_government = fascism
@@ -5403,6 +5424,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_expand_the_chinese_territories
 
 		select_effect = {
@@ -5440,7 +5464,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = POR_join_the_axis focus = POR_the_fifth_empire }
 		icon = GFX_focus_usa_focus_on_asia
-		x = -1
+		x = 0
 		y = 1
 
 		relative_position_id = POR_the_fifth_empire
@@ -5685,7 +5709,7 @@ focus_tree = {
 		prerequisite = { focus = POR_national_syndicalism focus = POR_the_return_of_duarte }
 
 		icon = GFX_goal_generic_navy_anti_submarine
-		x = 3
+		x = 2
 		y = 1
 
 		relative_position_id = POR_national_syndicalism
@@ -5718,6 +5742,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_mapa_cor_de_rosa
 
 		select_effect = {
@@ -5917,6 +5944,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = POR_a_royal_wedding
 		prerequisite = { focus = POR_estado_novo }
 

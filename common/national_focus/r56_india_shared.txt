@@ -28,6 +28,9 @@ shared_focus = {
 	ai_will_do = {
 		factor = 50
 	}
+	allow_branch = {
+		always = no
+	}
 	available = {
 		if = {
 			limit = {
@@ -103,6 +106,9 @@ shared_focus = {
 		trigger = {
 			has_focus_tree = r56_indian_revolt_focus
 		}
+	}
+	allow_branch = {
+		always = no
 	}
 	offset = {
 		x = -40
