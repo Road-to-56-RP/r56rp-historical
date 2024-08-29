@@ -1,1 +1,2 @@
 HNK = "countries/Hong Kong.txt"
+NUL = "countries/NULL.txt"

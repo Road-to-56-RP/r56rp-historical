@@ -1,0 +1,1202 @@
+annexation_politics= {
+
+	AST_annex_NZL = {
+		icon = infiltrate_state
+		visible = {
+			tag = AST
+		}
+		available = {
+			if={
+			NZL={
+				is_ai=yes
+
+				#no annexing mid invasion
+				all_core_state = {
+					is_fully_controlled_by = NZL
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = NZL transfer_troops = yes }
+			 284 = { set_compliance = 100 }
+			 726 = { set_compliance = 100 }
+			 723 = { set_compliance = 100 }
+
+		}
+	}
+	AST_annex_INS = {
+		icon = infiltrate_state
+		visible = {
+			tag = AST
+		}
+		available = {
+			if={
+			INS={
+				is_ai=yes
+
+				#no annexing mid invasion
+				all_core_state = {
+					is_fully_controlled_by = INS
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = INS transfer_troops = yes }
+			 669 = { set_compliance = 100 }
+			 668 = { set_compliance = 100 }
+			 667 = { set_compliance = 100 }
+			 721 = { set_compliance = 100 }
+			 738 = { set_compliance = 100 }
+			 677 = { set_compliance = 100 }
+			 673 = { set_compliance = 100 }
+			 334 = { set_compliance = 100 }
+			 335 = { set_compliance = 100 }
+			 672 = { set_compliance = 100 }
+
+		}
+	}
+	AST_annex_PHI = {
+		icon = infiltrate_state
+		visible = {
+			tag = USA
+		}
+		available = {
+			if={
+			PHI={
+				is_ai=yes
+
+				#no annexing mid invasion
+				all_core_state = {
+					is_fully_controlled_by = PHI
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = PHI transfer_troops = yes }
+			 623 = { set_compliance = 100 }
+			 624 = { set_compliance = 100 }
+			 625 = { set_compliance = 100 }
+			 626 = { set_compliance = 100 }
+			 627 = { set_compliance = 100 }
+			 628 = { set_compliance = 100 }
+			 327 = { set_compliance = 100 }
+		}
+	}
+  ENG_annex_MAL = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+			NOT={
+			 336 ={is_controlled_by = ENG}
+			}
+		}
+		available = {
+		if={
+		MAL={
+		is_ai=yes
+		}
+		}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = MAL transfer_troops = yes }
+			 333 = { set_compliance = 100 }
+			 336 = { set_compliance = 100 }
+
+		}
+	}
+	ENG_annex_AST = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			#date > 1939.01.01
+			if={
+				AST={
+						is_ai=yes
+						#no annexing mid invasion
+						all_core_state = {
+							is_fully_controlled_by = AST
+							}
+					}
+				}
+			#if={
+				#ROOT={
+					#has_war=yes
+				#}
+			#}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = AST transfer_troops = yes }
+			737 = { set_compliance = 100 }
+			674 = { set_compliance = 100 }
+			285 = { set_compliance = 100 }
+			520 = { set_compliance = 100 }
+			523 = { set_compliance = 100 }
+			521 = { set_compliance = 100 }
+			634 = { set_compliance = 100 }
+			519 = { set_compliance = 100 }
+			518 = { set_compliance = 100 }
+			517 = { set_compliance = 100 }
+			522 = { set_compliance = 100 }
+		}
+	}
+	ENG_annex_EGY = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			if={
+			EGY={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = EGY
+				}
+			}
+			}
+			if={
+			ROOT={
+			
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = EGY transfer_troops = yes }
+			452 = { set_compliance = 100 }
+			447 = { set_compliance = 100 }
+			907 = { set_compliance = 100 }
+			446 = { set_compliance = 100 }
+			453 = { set_compliance = 100 }
+			457 = { set_compliance = 100 }
+			456 = { set_compliance = 100 }
+			883 = { set_compliance = 100 }
+			551 = { set_compliance = 100 }
+			886 = { set_compliance = 100 }
+			887 = { set_compliance = 100 }
+			885 = { set_compliance = 100 }
+			884 = { set_compliance = 100 }
+			549 = { set_compliance = 100 }
+			
+		}
+	}
+	ENG_annex_NZL = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			#date > 1939.01.01
+			if={
+			NZL={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = NZL
+				}
+			}
+			}
+			#if={
+			#ROOT={
+			#has_war=yes
+			#}
+			#}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = NZL transfer_troops = yes }
+			284 = { set_compliance = 100 }
+			726 = { set_compliance = 100 }
+			723 = { set_compliance = 100 }
+		}
+	}
+	ENG_annex_ICE = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			date > 1936.01.01
+			if={
+			ICE={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = ICE
+				}
+			}
+			}
+			if={
+			ROOT={
+			
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = ICE transfer_troops = yes }
+			100 = { set_compliance = 100 }
+		}
+	}
+	ENG_annex_RAJ = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			#date > 1939.01.01
+			if={
+			RAJ={
+			is_ai=yes
+			#no annexing mid invasion
+			all_controlled_state = {
+				is_fully_controlled_by = IRE
+			}
+			}
+			}
+			#if={
+			#ROOT={
+			#has_war=yes
+			#}
+			#}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = RAJ transfer_troops = yes }
+			 434  = { set_compliance = 100 }
+			 432 = { set_compliance = 100 }
+			 444 = { set_compliance = 100 }
+			 435 = { set_compliance = 100 }
+			 429 = { set_compliance = 100 }
+			 288 = { set_compliance = 100 }
+			 430 = { set_compliance = 100 }
+			 439 = { set_compliance = 100 }
+			 428 = { set_compliance = 100 }
+			 427 = { set_compliance = 100 }
+			 437 = { set_compliance = 100 }
+			 436 = { set_compliance = 100 }
+			 441 = { set_compliance = 100 }
+			 438 = { set_compliance = 100 }
+			 424 = { set_compliance = 100 }
+			 423 = { set_compliance = 100 }
+			 640 = { set_compliance = 100 }
+			 425 = { set_compliance = 100 }
+			 787 = { set_compliance = 100 }
+			 426 = { set_compliance = 100 }
+			 442 = { set_compliance = 100 }
+			 440 = { set_compliance = 100 }
+			 445 = { set_compliance = 100 }
+			 433 = { set_compliance = 100 }
+			 443 = { set_compliance = 100 }
+			 431 = { set_compliance = 100 }
+			 321 = { set_compliance = 100 }
+
+		}
+	}
+	ENG_annex_CAN = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			#date > 1939.01.01
+			if={
+			CAN={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = CAN
+				}
+			}
+			}
+			#if={
+			#ROOT={
+			#has_war=yes
+			#}
+			#}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = CAN transfer_troops = yes }
+			 470 = { set_compliance = 100 }
+			 473 = { set_compliance = 100 }
+			 739 = { set_compliance = 100 }
+			 467 = { set_compliance = 100 }
+			 465 = { set_compliance = 100 }
+			 683 = { set_compliance = 100 }
+			 472 = { set_compliance = 100 }
+			 682 = { set_compliance = 100 }
+			 471 = { set_compliance = 100 }
+			 464 = { set_compliance = 100 }
+			 466 = { set_compliance = 100 }
+			 468 = { set_compliance = 100 }
+			 469 = { set_compliance = 100 }
+			 276 = { set_compliance = 100 }
+			 740 = { set_compliance = 100 }
+
+		}
+	}
+	ENG_annex_SAF = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			#date > 1939.01.01
+			if={
+			SAF={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = SAF
+				}
+			}
+			}
+			#if={
+			#ROOT={
+			#has_war=yes
+			#}
+			#}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = SAF transfer_troops = yes }
+			 681 = { set_compliance = 100 }
+			 719 = { set_compliance = 100 }
+			 541 = { set_compliance = 100 }
+			 275 = { set_compliance = 100 }
+
+		}
+	}
+	ENG_annex_IRE = {
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+		}
+		available = {
+			if={
+			IRE={
+			is_ai=yes
+			#no annexing mid invasion
+			all_controlled_state = {
+				is_fully_controlled_by = IRE
+			}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = IRE transfer_troops = yes }
+			 134 = { set_compliance = 100 }
+			 113 = { set_compliance = 100 }
+			 135 = { set_compliance = 100 }
+
+		}
+	}
+  JAP_annex_SIA = {
+  	icon = infiltrate_state
+  	visible = {
+  		tag = JAP
+			NOT={
+			 289 ={is_controlled_by =JAP}
+			}
+  	}
+  	available = {
+  		date > 1936.01.01
+  		if={
+  		SIA={
+  		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = SIA
+			}
+  		}
+  		}
+  	}
+  	fire_only_once = yes
+  	ai_will_do = {
+  		factor = 0
+  	}
+  	complete_effect = {
+		annex_country = { target = SIA transfer_troops = yes }
+			every_state = {
+				limit = {
+					is_core_of = SIA
+				}
+				JAP = {
+					add_state_core = PREV
+				}
+  	}
+  }
+  }
+	JAP_annex_MAN = {
+  	icon = infiltrate_state
+  	visible = {
+  		tag = JAP
+			NOT={
+			 714 ={is_controlled_by =JAP}
+			}
+  	}
+  	available = {
+  		date > 1936.01.01
+  		if={
+  		MAN={
+  			is_ai=yes
+			#no annexing mid invasion
+  			}
+  		}
+  	}
+  	fire_only_once = yes
+  	ai_will_do = {
+  		factor = 0
+  	}
+  	complete_effect = {
+		annex_country = { target = MAN transfer_troops = yes }
+ 			every_state = {
+				limit = {
+					is_core_of = MAN
+				}
+				JAP = {
+					PREV = {set_compliance = 100}
+				}
+  		}
+  	}
+  }
+  USA_annex_MEX = {
+		icon = infiltrate_state
+		visible = {
+			tag = USA
+			NOT={
+			 480 ={is_controlled_by = USA}
+			}
+		}
+		available = {
+			if={
+			MEX={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = MEX
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			 annex_country = { target = MEX transfer_troops = yes }
+			 484 = { set_compliance = 100 }
+			 475 = { set_compliance = 100 }
+			 482 = { set_compliance = 100 }
+			 480 = { set_compliance = 100 }
+			 481 = { set_compliance = 100 }
+			 485 = { set_compliance = 100 }
+			 478 = { set_compliance = 100 }
+			 277 = { set_compliance = 100 }
+			 476 = { set_compliance = 100 }
+			 483 = { set_compliance = 100 }
+			 479 = { set_compliance = 100 }
+			 477 = { set_compliance = 100 }
+			 474 = { set_compliance = 100 }
+
+		}
+	}
+
+	USA_annex_ARG = {
+		icon = infiltrate_state
+		visible = {
+			tag = USA
+			NOT={
+			 508 ={is_controlled_by = USA}
+			}
+		}
+		available = {
+			if={
+			ARG={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = ARG
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = ARG transfer_troops = yes }
+			508 ={ set_compliance  = 100}
+			509 ={ set_compliance  = 100}
+			510 ={ set_compliance  = 100}
+			511 ={ set_compliance  = 100}
+			512 ={ set_compliance  = 100}
+			278 ={ set_compliance  = 100}
+		}
+	}
+	USA_annex_BRA = {
+		icon = infiltrate_state
+		visible = {
+			tag = USA
+			NOT={
+			 495 ={is_controlled_by = USA}
+			}
+		}
+		available = {
+			if={
+			BRA={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = BRA
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = BRA transfer_troops = yes }
+			495 ={ set_compliance  = 100}
+			496 ={ set_compliance  = 100}
+			497 ={ set_compliance  = 100}
+			498 ={ set_compliance  = 100}
+			499 ={ set_compliance  = 100}
+			500 ={ set_compliance  = 100}
+			501 ={ set_compliance  = 100}
+			502 ={ set_compliance  = 100}
+			503 ={ set_compliance  = 100}
+			504 ={ set_compliance  = 100}
+			505 ={ set_compliance  = 100}
+			280 ={ set_compliance  = 100}
+		}
+	}
+  ITA_annex_BUL = {
+		icon = infiltrate_state
+		visible = {
+			tag = ITA
+		}
+		available = {
+			date > 1939.01.01
+			if={
+		  BUL={
+			is_ai=yes
+			#no annexing mid invasion
+			all_core_state = {
+				is_fully_controlled_by = BUL
+				}
+			}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			annex_country = { target = BUL transfer_troops = yes 
+		}
+
+		48 = {set_compliance = 100 }
+		308 = {set_compliance = 100 }
+		106 = {set_compliance = 100 }
+		108 = {set_compliance = 100 }
+		211 = {set_compliance = 100 }
+		212 = {set_compliance = 100 }
+		184 = {set_compliance = 100 }
+		731 = {set_compliance = 100 }
+		185 = {set_compliance = 100 }
+		47 = {set_compliance = 100 }
+		186 = {set_compliance = 100 }
+		187 = {set_compliance = 100 }
+		801 = {set_compliance = 100 }
+
+
+
+    
+ 
+
+			
+
+		}
+}
+
+SPA_annex_BELARIC = {
+	
+	icon = infiltrate_state
+	visible = {
+		tag = ITA
+	}
+	available = {
+		controls_state = 177
+		date > 1939.1.1
+	}
+	fire_only_once = yes
+	ai_will_do = {
+		factor = 0
+	}
+	complete_effect = {
+	177 = {
+		transfer_state_to = SPA
+		add_core_of = SPA
+	}
+	}
+
+
+
+		
+
+	}
+
+
+
+
+
+SOV_annex_PER = {
+	icon = infiltrate_state
+	visible = {
+		tag = SOV
+		NOT ={419={ is_controlled_by = SOV}}
+	}
+	available = {
+		if={
+		PER={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = PER
+			}
+		}
+		}
+	}
+	fire_only_once = yes
+	ai_will_do = {
+		factor = 0
+	}
+	complete_effect = {
+	annex_country = { target = PER transfer_troops = yes }
+	419={ set_compliance  = 100}
+	420={ set_compliance  = 100}
+	421={ set_compliance  = 100}
+	413={ set_compliance  = 100}
+	411={ set_compliance  = 100}
+	418={ set_compliance  = 100}
+	412={ set_compliance  = 100}
+	410={ set_compliance  = 100}
+	414={ set_compliance  = 100}
+	416={ set_compliance  = 100}
+	417={ set_compliance  = 100}
+	266={ set_compliance  = 100}
+	}
+}
+SOV_annex_MON = {
+	icon = infiltrate_state
+	visible = {
+		tag = SOV
+		NOT = { 817 ={is_controlled_by = SOV} }
+	}
+	available = {
+		if={
+		MON={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = MON
+			}
+		}
+		}
+	}
+	fire_only_once = yes
+	ai_will_do = {
+		factor = 0
+	}
+	complete_effect = {
+	annex_country = { target = MON transfer_troops = yes }
+	every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				SOV = {
+					add_state_core = PREV
+				}
+  	}
+	#817={ set_compliance  = 100}
+	#818={ set_compliance  = 100}
+	#819={ set_compliance  = 100}
+	#820={ set_compliance  = 100}
+	#330={ set_compliance  = 100}
+	#329={ set_compliance  = 100}
+	}
+}
+SOV_annex_AFG = {
+	icon = infiltrate_state
+	visible = {
+		tag = SOV
+		NOT = { 415 ={is_controlled_by = SOV} }
+	}
+	available = {
+		if={
+		AFG={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = AFG
+			}
+		}
+		}
+	}
+	fire_only_once = yes
+	ai_will_do = {
+		factor = 0
+	}
+	complete_effect = {
+		annex_country = { target = AFG transfer_troops = yes }
+		415={ set_compliance  = 100}
+		267={ set_compliance  = 100}
+	}
+}
+ITA_annex_ETH = {
+		icon = infiltrate_state
+		visible = {
+			tag = ITA
+			NOT={
+			 271 ={is_controlled_by = ITA}
+			 559 ={is_controlled_by = ITA}
+			 550 ={is_controlled_by = ITA}
+			}
+		}
+		available = {
+		if={
+		ETH={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = ETH
+			}
+		}
+		}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = ETH transfer_troops = yes }
+		set_collaboration = {
+			target = ETH
+			value = 1.0
+		}
+
+		}
+	}
+	GER_annex_SWE = {
+		icon = infiltrate_state
+		visible = {
+			tag = GER
+			NOT={
+			666 ={is_controlled_by = GER}
+			38 ={is_controlled_by = GER}
+			140 ={is_controlled_by = GER}
+			}
+		}
+		available = {
+		if={
+		SWE={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = SWE
+			}
+		}
+		}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = SWE transfer_troops = yes }
+			38  = {set_compliance = 100}
+			124 = {set_compliance = 100}
+			138 = {set_compliance = 100}
+			139 = {set_compliance = 100}
+			140 = {set_compliance = 100}
+			141 = {set_compliance = 100}
+			666 = {set_compliance = 100}
+			913 = {set_compliance = 100}
+			915 = {set_compliance = 100}
+			916 = {set_compliance = 100}
+			917 = {set_compliance = 100}
+			918 = {set_compliance = 100}
+			919 = {set_compliance = 100}
+		}
+	}
+
+
+	
+
+		   
+
+
+
+		GER_annex_FIN = {
+		icon = infiltrate_state
+		visible = {
+			tag = GER
+			NOT={
+			111 ={is_controlled_by = GER}
+			149 ={is_controlled_by = GER}
+			148 ={is_controlled_by = GER}
+			}
+		}
+		available = {
+		if={
+		FIN={
+		is_ai=yes
+		#no annexing mid invasion
+		all_core_state = {
+			is_fully_controlled_by = FIN
+			}
+		}
+		}
+		date > 1941.1.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = FIN transfer_troops = yes }
+			 146 ={set_compliance = 100}
+			 145 ={set_compliance = 100}
+			 111 ={set_compliance = 100}
+			150 ={set_compliance = 100}
+			149 ={set_compliance = 100}
+			148 ={set_compliance = 100}
+			722 ={set_compliance = 100}
+			926 ={set_compliance = 100}
+			927 ={set_compliance = 100}
+			930 ={set_compliance = 100}
+			928 ={set_compliance = 100}
+			929 ={set_compliance = 100}
+			147 ={set_compliance = 100}
+		}
+	}
+
+
+	JAP_annex_CHI = {
+		icon = infiltrate_state
+		visible = {
+			tag = JAP
+			
+		}
+		available = {
+			date > 1940.1.1
+		country_exists = CHI
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		set_collaboration = {
+			target = CHI
+			value = 0.7
+		}
+		annex_country = { target = CHI }
+	    add_ideas = Anti_war_sentiment
+		hidden_effect = {
+			remove_ideas = GEACPS_preparing_for_china
+			MAN = {
+				remove_ideas = GEACPS_preparing_for_china
+			}
+			KOR = {
+				remove_ideas = GEACPS_preparing_for_china
+			}
+		}
+	}
+
+	}
+
+	SPA_annex_VEN = {
+		icon = infiltrate_state
+		visible = {
+			tag = SPA
+		
+		}
+		available = {
+			date > 1938.1.1
+			if= {
+				VEN ={
+					is_ai=yes
+						}
+					}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		set_collaboration = {
+			target = VEN
+			value = 1
+		}
+		annex_country = { target = VEN }
+	}
+
+	}
+
+	POR_annex_VEN = {
+		icon = infiltrate_state
+		visible = {
+			tag = POR
+		
+		}
+		available = {
+			date > 1939.1.1
+			POR = { controls_state = 41 }
+			if= {
+				VEN ={
+					is_ai=yes
+						}
+					}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		set_collaboration = {
+			target = VEN
+			value = 1
+		}
+		annex_country = { target = VEN }
+	}
+
+	}
+
+		SPR_annex_POR = {
+		icon = infiltrate_state
+		visible = {
+			tag = SPR
+			NOT={
+			}
+		}
+		available = {
+		date > 1939.01.01
+		if={
+		POR={
+		is_ai=yes
+		}
+		}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = POR transfer_troops = yes }
+		180 ={set_compliance = 100}
+		181 ={set_compliance = 100}
+		112 ={set_compliance = 100}
+		795 ={set_compliance = 100}
+		179 ={set_compliance = 100}
+		697 ={set_compliance = 100}
+		540 ={set_compliance = 100}
+		544 ={set_compliance = 100}
+		796 ={set_compliance = 100}
+		705 ={set_compliance = 100}
+		729 ={set_compliance = 100}
+		}
+	}
+
+#	SWE_annex_NOR = {
+#		icon = infiltrate_state
+#		visible = {
+#			tag = SWE
+#			NOT={
+#			}
+#		}
+#		available = {
+#		date > 1939.01.01
+#		if={
+#		NOR={
+#		is_ai=yes
+#		}
+#		}
+#		}
+#		fire_only_once = yes
+#		ai_will_do = {
+#			factor = 0
+#		}
+#		complete_effect = {
+#		annex_country = { target = NOR transfer_troops = yes }
+#		142 ={set_compliance = 100}
+#		110 ={set_compliance = 100}
+#		143 ={set_compliance = 100}
+#		144 ={set_compliance = 100}
+#		}
+#	}
+#
+#	SWE_annex_DEN = {
+#		icon = infiltrate_state
+#		visible = {
+#			tag = SWE
+#			NOT={
+#			}
+#		}
+#		available = {
+#		date > 1939.01.01
+#		if={
+#		DEN={
+#		is_ai=yes
+#		}
+#		}
+#		}
+#		fire_only_once = yes
+#		ai_will_do = {
+#			factor = 0
+#		}
+#		complete_effect = {
+#  	annex_country = { target = DEN transfer_troops = yes }
+#		37 ={set_compliance = 100}
+#		99 ={set_compliance = 100}
+#		}
+#	}
+
+
+	CALL_INS_TO_ALLIES={
+		icon = infiltrate_state
+		visible = {
+			tag = ENG
+			}
+			available = {
+				date> 1940.1.1
+			}
+			fire_only_once = yes
+			ai_will_do = {
+			factor = 0
+			}
+	complete_effect = {
+		add_to_faction=INS
+		}
+	}
+
+	Repeat_Fate_of_Czechoslovakia = 
+	{
+		allowed = {
+			tag = GER
+
+		}
+		visible = {
+			has_completed_focus = GER_fate_of_czechoslovakia
+			country_exists = CZE
+		}
+
+		complete_effect = {
+			
+			country_event = { 
+				id = germany.55
+			}
+		}
+	}
+
+	POR_annex_SPR = {
+		icon = infiltrate_state
+		visible = {
+			tag = POR
+		}
+		available = {
+			has_global_flag = scw_over
+			date > 1939.01.01
+			if={
+				SPR={
+					is_ai=yes
+				}
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		annex_country = { target = SPR transfer_troops = yes }
+			165 ={set_compliance = 100}
+			171 ={set_compliance = 100}
+			790 ={set_compliance = 100}
+			174 ={set_compliance = 100}
+			791 ={set_compliance = 100}
+			176 ={set_compliance = 100}
+			792 ={set_compliance = 100}
+			172 ={set_compliance = 100}
+			794 ={set_compliance = 100}
+			788 ={set_compliance = 100}
+			41 ={set_compliance = 100}
+			793 ={set_compliance = 100}
+			166 ={set_compliance = 100}
+			167 ={set_compliance = 100}
+			170 ={set_compliance = 100}
+			175 ={set_compliance = 100}
+			168 ={set_compliance = 100}
+			173 ={set_compliance = 100}
+			789 ={set_compliance = 100}
+			169 ={set_compliance = 100}
+			177 ={set_compliance = 100}
+			290 ={set_compliance = 100}
+		}
+	}
+	
+
+	
+	
+}

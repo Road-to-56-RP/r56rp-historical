@@ -1,3 +1,9 @@
+annexation_politics= {
+	visible = {
+		always = yes
+	}
+}
+
 form_prussia_category = {
 	icon = formable_nations_prussia
 	picture = GFX_decision_category_reform_prussia
