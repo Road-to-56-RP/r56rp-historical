@@ -11,5 +11,5 @@ dependencies={
 	"The Road to 56 [BETA]"
 }
 picture="thumbnail.png"
-supported_version="1.14.*"
+supported_version="1.14.8"
 remote_file_id="3318999074"
