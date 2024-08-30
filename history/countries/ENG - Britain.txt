@@ -270,7 +270,7 @@ set_popularities = {
 
 create_faction = Allies
 add_to_faction = ENG
-#add_to_faction = FRA
+add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
 add_to_faction = NZL
@@ -280,8 +280,12 @@ add_to_faction = RAJ
 give_military_access = EGY
 add_to_faction = EGY
 add_to_faction = MAL
+add_to_faction = MEX
+add_to_faction = BRA
+add_to_faction = ARG
+add_to_faction = IRE
 
-#give_guarantee = CZE
+give_guarantee = pol
 
 # Order matters - here Chamberlain becomes starting leader
 recruit_character = ENG_oswald_mosley

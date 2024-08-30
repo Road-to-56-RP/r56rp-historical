@@ -109,6 +109,18 @@ NDefines.NNavy.SUBMARINE_ESCAPE_RATIOS = { -- subs will escape battle in convoy 
 	1.5,   -- high (vanilla 1)
 	1.0,   -- I am death incarnate! (vanilla 0.1)
 }
+
+------------------ No Cost for Divisions, Navy Templates ----------------------
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
+
+NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0           -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
+NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0      -- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
+NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0       -- XP cost for converting one equipment module to a related module when creating an equipment variant.
+NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0 
+
+
 NDefines.NNavy.CARRIER_ONLY_COMBAT_ACTIVATE_TIME = 0 -- vanilla 0
 NDefines.NNavy.CAPITAL_ONLY_COMBAT_ACTIVATE_TIME = 6 -- vanilla 6
 NDefines.NNavy.ALL_SHIPS_ACTIVATE_TIME = 10 -- vanilla 8. This gives capital ships more time to fire increasing thier importance.
@@ -118,3 +130,7 @@ NDefines.NAI.GARRISON_FRACTION = 0.2 -- 20% of the troops will NOT push the enem
 
 -- ## NFocus ##
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30 --This much progress can be saved while not having a focus selected
+----------------- License------------------
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0							-- Base IC cost for lended license
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0				-- IC cost equipment for every year of equipment after 1936
+NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = 0				-- base MIC speed modifier for licensed equipment

@@ -1621,7 +1621,7 @@ focus_tree = {
 		#	}
 		#}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -1676,7 +1676,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1701,7 +1701,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_liaison_conference
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1870,9 +1870,8 @@ focus_tree = {
 
 		available = {
 			CHI = {
-				surrender_progress > 0.25 #lowered bc of the vps added if china completes the big rear
+				surrender_progress > 0.15 #lowered bc of the vps added if china completes the big rear
 			}
-			has_war_with = USA
 		}
 
 		bypass = {
@@ -1923,13 +1922,13 @@ focus_tree = {
 			605 = {
 				add_resource = {
 					type = aluminium
-					amount = 8
+					amount = 16
 				}
 			}
 			325 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 24
 				}
 			}
 			if = {
@@ -2078,7 +2077,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = JAP_strike_south_doctrine
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 2
@@ -2105,6 +2104,9 @@ focus_tree = {
 	}
 
 	focus = {
+		allow_branch = {
+			always = no
+		}
 		id = JAP_bypass_the_philippines
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
@@ -2153,13 +2155,13 @@ focus_tree = {
 		icon = GFX_focus_JAP_formosa_base
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
 		mutually_exclusive = { focus = JAP_bypass_the_philippines }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
 
 		will_lead_to_war_with = PHI
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2393,7 +2395,7 @@ focus_tree = {
 		will_lead_to_war_with = MAL
 		will_lead_to_war_with = INS
 
-		cost = 10
+		cost = 1
 
 		ai_will_do = {
 			factor = 10
@@ -3146,7 +3148,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_strike_south_doctrine
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 5
@@ -3322,7 +3324,9 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = JAP_liaison_conference
-
+		allow_branch = {
+			always = no
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -3409,7 +3413,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}			
@@ -3437,10 +3441,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -3449,11 +3453,11 @@ focus_tree = {
 				limit = {
 					is_in_home_area = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -3470,10 +3474,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3489,10 +3493,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}											
@@ -3526,7 +3530,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3536,7 +3540,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -8909,7 +8913,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8920,29 +8924,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 30
+			army_experience = 50
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				producer = JAP
-				amount = 3000
-			}
-			#bit of help for the AI
-			hidden_effect = {
-				if = {
-					limit = {
-						difficulty > 1
-						GER = {
-							is_ai = yes
-						}
-					}
-					add_offsite_building = { type = arms_factory level = 1 }
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 2000
-						producer = JAP
-					}
-
-				}
+				amount = 5000
 			}			
 		}
 	}		
@@ -10659,7 +10645,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = JAP_fighter_modernization
 					bonus = 1
-					uses = 1
+					uses = 2
 					technology = improved_small_airframe
 					technology = advanced_small_airframe
 				}
@@ -11104,7 +11090,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				navy_experience = 50
+				navy_experience = 75
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -11121,10 +11107,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -11160,7 +11146,6 @@ focus_tree = {
 		id = JAP_carrier_warfare_experiments
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = JAP_new_naval_estimates }
-		mutually_exclusive = { focus = JAP_supremacy_of_the_battlefleet }
 		x = -1
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
@@ -11350,7 +11335,6 @@ focus_tree = {
 		id = JAP_supremacy_of_the_battlefleet
 		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = JAP_new_naval_estimates }
-		mutually_exclusive = { focus = JAP_carrier_warfare_experiments }
 		x = 1
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
@@ -11547,10 +11531,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}

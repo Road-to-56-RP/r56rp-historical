@@ -839,48 +839,7 @@ ITA_annex_ETH = {
 
 		}
 	}
-	GER_annex_SWE = {
-		icon = infiltrate_state
-		visible = {
-			tag = GER
-			NOT={
-			666 ={is_controlled_by = GER}
-			38 ={is_controlled_by = GER}
-			140 ={is_controlled_by = GER}
-			}
-		}
-		available = {
-		if={
-		SWE={
-		is_ai=yes
-		#no annexing mid invasion
-		all_core_state = {
-			is_fully_controlled_by = SWE
-			}
-		}
-		}
-		}
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 0
-		}
-		complete_effect = {
-		annex_country = { target = SWE transfer_troops = yes }
-			38  = {set_compliance = 100}
-			124 = {set_compliance = 100}
-			138 = {set_compliance = 100}
-			139 = {set_compliance = 100}
-			140 = {set_compliance = 100}
-			141 = {set_compliance = 100}
-			666 = {set_compliance = 100}
-			913 = {set_compliance = 100}
-			915 = {set_compliance = 100}
-			916 = {set_compliance = 100}
-			917 = {set_compliance = 100}
-			918 = {set_compliance = 100}
-			919 = {set_compliance = 100}
-		}
-	}
+	
 
 
 	
@@ -1060,59 +1019,9 @@ ITA_annex_ETH = {
 		}
 	}
 
-#	SWE_annex_NOR = {
-#		icon = infiltrate_state
-#		visible = {
-#			tag = SWE
-#			NOT={
-#			}
-#		}
-#		available = {
-#		date > 1939.01.01
-#		if={
-#		NOR={
-#		is_ai=yes
-#		}
-#		}
-#		}
-#		fire_only_once = yes
-#		ai_will_do = {
-#			factor = 0
-#		}
-#		complete_effect = {
-#		annex_country = { target = NOR transfer_troops = yes }
-#		142 ={set_compliance = 100}
-#		110 ={set_compliance = 100}
-#		143 ={set_compliance = 100}
-#		144 ={set_compliance = 100}
-#		}
-#	}
+#	
 #
-#	SWE_annex_DEN = {
-#		icon = infiltrate_state
-#		visible = {
-#			tag = SWE
-#			NOT={
-#			}
-#		}
-#		available = {
-#		date > 1939.01.01
-#		if={
-#		DEN={
-#		is_ai=yes
-#		}
-#		}
-#		}
-#		fire_only_once = yes
-#		ai_will_do = {
-#			factor = 0
-#		}
-#		complete_effect = {
-#  	annex_country = { target = DEN transfer_troops = yes }
-#		37 ={set_compliance = 100}
-#		99 ={set_compliance = 100}
-#		}
-#	}
+#	
 
 
 	CALL_INS_TO_ALLIES={

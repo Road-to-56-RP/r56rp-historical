@@ -1723,11 +1723,11 @@ operation_collaboration_government = { ### 10 2/55
 	}
 
 	equipment = {
-		support_equipment = 200
+		support_equipment = 100
 		infantry_equipment = 1000
 		civilian_factories = {
-			amount = 10
-			days = 60
+			amount = 5
+			days = 30
 		}
 	}
 
@@ -1740,10 +1740,6 @@ operation_collaboration_government = { ### 10 2/55
 		has_collaboration = {
 			target = FROM
 			value < 1.0
-		}
-		has_operation_token = {
-			tag = FROM
-			token = token_civilian
 		}
 	}
 

@@ -13,8 +13,10 @@ state = {
 	history = { 
 
 		
+		owner = NUL
 		add_core_of = NUL
-		set_owner = NUL
+	
+		
 
 		buildings = {
 			infrastructure = 2
