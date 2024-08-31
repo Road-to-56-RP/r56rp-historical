@@ -178,15 +178,14 @@ add_ideas = {
 	KMT_weak_army
 	incompetent_industry_real
 	incompetent_industry_real_navy
-	civilian_economy
+	KMT_corrupted_government
 	CHI_alexander_von_falkenhausen
-	CHI_du_yuesheng
 }
 
-set_power_balance = {
-    id = CHI_r56rp_corruption_power_balance
-	set_value = -1
-}
+#set_power_balance = {
+#    id = CHI_r56rp_corruption_power_balance
+#	set_value = -1
+#}d
 
 save_global_event_target_as = WTT_current_china_leader
 
