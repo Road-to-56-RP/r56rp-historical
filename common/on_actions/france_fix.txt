@@ -1,0 +1,16 @@
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+						tag = FRA
+						FRA = { capital_scope = { NOT = {is_on_continent = europe}}}
+				}
+				
+				FRA = {
+					set_capital = {state = 806}
+				}
+			}
+		}
+	}
+}

@@ -21,7 +21,7 @@ focus_tree = {
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -52,7 +52,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -139,7 +139,7 @@ focus_tree = {
 			prerequisite = { focus = FRA_devalue_the_franc }
 			mutually_exclusive = { }
 			relative_position_id = FRA_devalue_the_franc
-			cost = 10
+			cost = 5
 	
 			ai_will_do = {
 				factor = 1
@@ -177,7 +177,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}		
@@ -234,7 +234,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_metropolitan_france
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -285,7 +285,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = FRA_industrial_expansion
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -359,7 +359,7 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0.2
 		}
@@ -436,7 +436,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -477,7 +477,7 @@ focus_tree = {
 		prerequisite = {focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -540,7 +540,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -594,7 +594,7 @@ focus_tree = {
 		prerequisite = {focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -647,7 +647,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = FRA_algerie_france
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -692,7 +692,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_industrial_expansion
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -721,7 +721,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_colonial_industry
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3798,7 +3798,7 @@ focus_tree = {
 			focus = FRA_status_quo
 			focus = FRA_radicalize_front
 		}
-		x = -4.75
+		x = -3
 		y = 1
 		relative_position_id = FRA_status_quo
 		offset = {

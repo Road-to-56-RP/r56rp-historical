@@ -3328,9 +3328,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AST_R56_dreams_of_a_republic
 
-		allow_branch = {
-			always = no
-		}
+		
 
 		cost = 5
 
@@ -3690,9 +3688,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = AST_R56_strengthen_the_coalition
 
-		allow_branch = {
-			always = no
-		}
+		
 
 		cost = 5
 
