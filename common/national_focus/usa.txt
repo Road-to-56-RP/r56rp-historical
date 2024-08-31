@@ -7053,15 +7053,6 @@ focus_tree = {
 		icon = GFX_Goal_USA_washington
 		x = 3
 		y = 1
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				CSA = {
-					exists = yes
-				}
-			}
-		}
 		prerequisite = { focus = USA_work_with_the_bund }
 		prerequisite = { focus = USA_national_employment_strategy }
 		mutually_exclusive = { focus = USA_honor_the_confederacy }
@@ -9172,37 +9163,7 @@ focus_tree = {
 		icon = GFX_Goal_USA_War_dep
 		x = 50
 		y = 0
-		offset = {
-			x = -40
-			y = 0
-			trigger = {
-				not = { has_dlc = "Man the Guns" }
-			}
-		}
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_continue_the_new_deal
-				has_dlc = "Man the Guns"
-			}
-		}
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_dlc = "Man the Guns"
-			}
-		}
+		
 		cost = 5 # really doesn't give that much
 
 		ai_will_do = {
