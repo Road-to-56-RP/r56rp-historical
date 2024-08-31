@@ -3514,6 +3514,7 @@ technologies = {
 		}
 
 		resistance_growth_on_our_occupied_states = 0.25
+		enable_tactic = tactic_guerrilla_tactics
 
 		doctrine = yes
 		research_cost = 4.5
@@ -3522,6 +3523,7 @@ technologies = {
 			land_doctrine
 			cat_mass_assault
 		}
+		
 
 		folder = {
 			name = land_doctrine_folder

@@ -48,6 +48,7 @@ ideas = {
 				can_send_volunteers = no
 			}
 		}
+		
 
 		r56rp_ht_freeze_nation_idea = {
 			picture = HUN_treaty_of_triannon
@@ -55,6 +56,14 @@ ideas = {
 			# this is more or less just a visible flag
 			# diplomatic action overrides check for this, if it sees this
 			# it locks the button to declare war for this, and upon this
+		}
+		#Only for volunteer nations
+		r56rp_volunteers_idea = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteer_size = 999
+				send_volunteer_divisions_required = -0.9
+			}
 		}
 	}
 		

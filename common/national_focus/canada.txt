@@ -1555,7 +1555,7 @@ focus_tree = {
 		
 		
 		bypass = {
-			has_tech = motorised_infantry
+			
 		}
 
 		available_if_capitulated = yes
@@ -1583,7 +1583,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = r56_CAN_cmp_truck
-				bonus = 1.5
+				bonus = 3
 				uses = 1
 				technology = motorised_infantry
 			}
