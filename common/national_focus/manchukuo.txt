@@ -3544,40 +3544,40 @@ focus_tree = {
 			add_ideas = MAN_national_martyr_shrine_idea
 		}
 
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					has_completed_focus = MAN_obedience
-				}
-			}
-		}
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				AND = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-					OR = {
-						has_completed_focus = MAN_assertiveness
-						JAP = {
-							has_completed_focus = JAP_strengthen_civilian_government
-						}
-						JAP = {
-							has_completed_focus = JAP_the_unthinkable_option
-						}						
-					}
-				}
-			}
-		}
+		#offset = {
+		#	x = -2
+		#	y = 0
+		#	trigger = {
+		#		AND = {
+		#			has_game_rule = {
+		#				rule = obsolete_focus_branches_visibility
+		#				option = HIDE
+		#			}
+		#			has_completed_focus = MAN_obedience
+		#		}
+		#	}
+		#}
+		#offset = {
+		#	x = 2
+		#	y = 0
+		#	trigger = {
+		#		AND = {
+		#			has_game_rule = {
+		#				rule = obsolete_focus_branches_visibility
+		#				option = HIDE
+		#			}
+		#			OR = {
+		#				has_completed_focus = MAN_assertiveness
+		#				JAP = {
+		#					has_completed_focus = JAP_strengthen_civilian_government
+		#				}
+		#				JAP = {
+		#					has_completed_focus = JAP_the_unthinkable_option
+		#				}						
+		#			}
+		#		}
+		#	}
+		#}
 	}	
 	
 	focus = {
