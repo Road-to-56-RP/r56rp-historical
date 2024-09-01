@@ -1,0 +1,262 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			ENG = {
+				if = {
+					limit = {MAL = { is_ai = yes }}
+						annex_country = { target = MAL transfer_troops = yes }
+						336 = { set_compliance  = 100}
+						333 = { set_compliance  = 100}
+				}
+			}
+			ENG = {
+				if = {
+					limit = {EGY = { is_ai = yes }}
+						annex_country = { target = EGY transfer_troops = yes }
+						452 = { set_compliance = 100 } 
+						447 = { set_compliance = 100 } 
+						907 = { set_compliance = 100 } 
+						446 = { set_compliance = 100 } 
+						453 = { set_compliance = 100 } 
+						457 = { set_compliance = 100 } 
+						456 = { set_compliance = 100 } 
+						883 = { set_compliance = 100 } 
+						551 = { set_compliance = 100 } 
+						886 = { set_compliance = 100 } 
+						887 = { set_compliance = 100 } 
+						885 = { set_compliance = 100 }
+						884 = { set_compliance = 100 }
+						549 = { set_compliance = 100 }
+				}
+			}
+			ENG = {
+				if = {
+					limit = { ICE = { is_ai = yes }}
+						annex_country = { target = ICE transfer_troops = yes }
+						100 = { set_compliance = 100 } 
+						101 = { set_owner = ENG } 
+						
+				}
+			}
+			#BELGIUM
+			HOL = {
+				if = {
+					limit = {BEL = { is_ai = yes }}
+						annex_country = { target = BEL transfer_troops = yes }
+						6 = { set_compliance  = 100}
+						34 = { set_compliance  = 100}
+						965 = { set_compliance  = 100}
+				}
+			}
+			#Luxembourg
+			HOL = {
+				if = {
+					limit = { LUX= { is_ai = yes }}
+						annex_country = { target = LUX transfer_troops = yes }
+						8 = { set_compliance  = 100}
+				}
+			}
+			#BALTICS
+			HOL = {
+				if = {
+					limit = {BEL = { is_ai = yes }}
+						annex_country = { target = BEL transfer_troops = yes }
+						6 = { set_compliance  = 100}
+						34 = { set_compliance  = 100}
+						965 = { set_compliance  = 100}
+				}
+			}
+			LIT = {
+				if = {
+					limit = {LAT = { is_ai = yes }}
+						annex_country = { target = LAT transfer_troops = yes }
+						190 = { set_compliance  = 100}
+						809 = { set_compliance  = 100}
+						808 = { set_compliance  = 100}
+						810 = { set_compliance  = 100}
+						808 = { set_compliance  = 100}
+						12 = { set_compliance  = 100}
+						
+				}
+			}
+			LIT = {
+				if = {
+					limit = {EST = { is_ai = yes }}
+						annex_country = { target = EST transfer_troops = yes }
+						191 = { set_compliance  = 100}
+						13 = { set_compliance  = 100}
+						813 = { set_compliance  = 100}
+						812 = { set_compliance  = 100}
+						808 = { set_compliance  = 100}
+						811 = { set_compliance  = 100}
+						
+				}
+			}
+			FRA = {
+				if = {
+					limit = { FRI= { is_ai = yes }}
+						annex_country = { target = FRI transfer_troops = yes }
+				}
+			}
+			CHI = {
+				annex_country = { target = GXC transfer_troops = yes }
+				annex_country = { target = YUN transfer_troops = yes }
+				annex_country = { target = XSM transfer_troops = yes }
+				annex_country = { target = PRC transfer_troops = yes }
+				annex_country = { target = SHX transfer_troops = yes }
+				annex_country = { target = TNG transfer_troops = yes }
+				annex_country = { target = SIK transfer_troops = yes }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = GXC
+							is_core_of = YUN
+							is_core_of = XSM
+							is_core_of = PRC
+							is_core_of = SHX
+							is_core_of = TNG
+							is_core_of = SIK
+						}
+					}
+					remove_core_of = GXC
+					remove_core_of = YUN
+					remove_core_of = XSM
+					remove_core_of = PRC
+					remove_core_of = SHX
+					remove_core_of = TNG
+					remove_core_of = SIK
+					remove_claim_by = GXC
+					remove_claim_by = YUN
+					remove_claim_by = XSM
+					remove_claim_by = PRC
+					remove_claim_by = SHX
+					remove_claim_by = TNG
+					remove_claim_by = SIK
+				}
+			}
+			MAN = {
+				annex_country = { target = MEN transfer_troops = yes }
+			}
+			MON = {
+				annex_country = { target = TAN transfer_troops = yes }
+				329 = { set_compliance  = 100}
+			}
+			RAJ = {
+				annex_country = { target = NEP transfer_troops = yes }
+				annex_country = { target = BHU transfer_troops = yes }
+				323 = { set_compliance  = 100}
+				324 = { set_compliance  = 100}
+			}
+			ENG = {
+				annex_country = { target = MPL transfer_troops = yes }
+				annex_country = { target = IRQ transfer_troops = yes }
+			}
+		}
+
+		effect = {
+			# because this is fucking faster and breaks less than invidividualy overriding
+			#neutral american countries
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = COL
+						is_core_of = VEN
+						is_core_of = ECU
+						is_core_of = PRU
+						is_core_of = BOL
+						is_core_of = CHL
+						is_core_of = PAR
+						is_core_of = URG
+						is_core_of = PAN
+						is_core_of = COS
+						is_core_of = NIC
+						is_core_of = HON
+						is_core_of = CUB
+						is_core_of = HAI
+						is_core_of = DOM
+						is_core_of = GUA
+						is_core_of = ELS
+					}
+					NOT = {
+						is_core_of = USA
+					}
+				}
+				every_country = {
+					PREV = {
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						set_demilitarized_zone = yes
+					}
+				}
+				add_core_of = Z01
+				transfer_state_to = Z01
+			}
+
+		}
+
+		effect = {
+			# switzerland
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = SWI
+					}
+				}
+				every_country = {
+					PREV = {
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						set_demilitarized_zone = yes
+					}
+				}
+				add_core_of = Z02
+				transfer_state_to = Z02
+			}
+		}
+
+		effect = {
+			# netural middle eastern states
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = TUR
+						is_core_of = SAU
+						region = 129
+					}
+				}
+				every_country = {
+					PREV = {
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						set_demilitarized_zone = yes
+					}
+				}
+				add_core_of = Z03
+				transfer_state_to = Z03
+			}
+		}
+
+		effect = {
+			# tibet
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = TIB
+					}
+					NOT = {
+						is_core_of = CHI
+					}
+				}
+				every_country = {
+					PREV = {
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						set_demilitarized_zone = yes
+					}
+				}
+				add_core_of = Z04
+				transfer_state_to = Z04
+			}
+		}
+	}
+}
