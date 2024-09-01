@@ -10,20 +10,21 @@ on_actions={
 				}
 			}
 			# Loops randomly removing civs from states to balance the oil imports.
-			for_loop_effect = {
-				end = 8
-				SOV = {
-					random_core_state = {
-						limit = {
-							industrial_complex > 0
-						}
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
-				}
-			}
+			# removed for hist
+			#for_loop_effect = {
+			#	end = 8
+			#	SOV = {
+			#		random_core_state = {
+			#			limit = {
+			#				industrial_complex > 0
+			#			}
+			#			remove_building = {
+			#				type = industrial_complex
+			#				level = 1
+			#			}
+			#		}
+			#	}
+			#}
 			for_loop_effect = {
 				end = 15
 				USA = {
