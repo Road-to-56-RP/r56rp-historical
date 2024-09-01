@@ -3111,15 +3111,9 @@ focus_tree = {
 	focus = {
 		id = SPA_fascist_economic_aid
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
-				has_government = fascism
-				is_major = yes
-			}
 		}
 		prerequisite = { focus = SPA_join_the_axis focus = SPA_ally_the_french }
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_autarky }
 		
 		icon = GFX_goal_fascist_factory
 		x = 1
@@ -3537,7 +3531,7 @@ focus_tree = {
 	focus = {
 		id = SPA_autarky
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
+		
 		
 		icon = GFX_goal_generic_oil_refinery
 		x = 1
@@ -5175,12 +5169,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_dictator_for_life
-		available = {
-			has_country_leader = {
-				character = SPA_francisco_franco
-				ruling_only = yes
-			}
-		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		mutually_exclusive = { focus = SPA_restore_the_monarchy }
 		
@@ -5715,12 +5703,8 @@ focus_tree = {
 
 	focus = {
 		id = SPA_retake_gibraltar
-		available = {
-			NOT = {
-				is_in_faction_with = ENG
-				has_war_with = ENG
-				controls_state = 118
-			}
+		allow_branch = {
+			always = no
 		}
 		prerequisite = { focus = SPA_demand_french_north_africa }
 		prerequisite = { focus = SPA_defenses_against_invasion }
