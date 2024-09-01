@@ -2745,16 +2745,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SPA_the_national_syndicalist_state
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		complete_tooltip = {
 			every_state = {
 				limit	= {	has_state_flag = SPA_the_national_and_popular_army_of_spain_2mil }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2772,10 +2772,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3511,16 +3511,16 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit	= {	has_state_flag = SPA_national_recovery_2civ }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
-			add_timed_idea = { idea = SPA_national_recovery_1 days = 1825 }
+			add_timed_idea = { idea = SPA_national_recovery_1 days = 1095 }
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3530,10 +3530,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_national_recovery_2civ
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -5162,7 +5162,7 @@ focus_tree = {
 	focus = {
 		id = SPA_direct_the_universities
 		available = {
-			num_of_factories > 50
+			
 		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		
