@@ -985,10 +985,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_corpo_truppe_volontarie
 		available = {
-			has_volunteers_amount_from = {
-				tag = ITA
-				count > 0
-			}
+			
 		}
 		prerequisite = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
 		
@@ -1023,10 +1020,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_condor_legion
 		available = {
-			has_volunteers_amount_from = {
-				tag = GER
-				count > 0
-			}
+			
 		}
 		prerequisite = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
 		
