@@ -1,0 +1,16 @@
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	custom_trigger_tooltip = {
+		tooltip = r56rp-h_cannot_justify_wargoal_manually
+		always = no
+	}
+}
+
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+	# should'nt be impossible, but doesent hurt to make sure.
+	NOT = {
+		tag = Z01
+		tag = Z02
+		tag = Z03
+		tag = Z04
+	}
+}

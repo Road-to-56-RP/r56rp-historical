@@ -647,7 +647,7 @@ r56rp_officer_training = {
 	# VOLUNTEERS START RT56RP - Simpy wuz here
 	morevolunteers_minor_start = { # Starting Decision for Volunteers [MINOR]
 		icon = GFX_decision_generic_prepare_civil_war
-		cost = 50
+		cost = 1
 
 		visible = {
 			NOT = {
@@ -658,10 +658,7 @@ r56rp_officer_training = {
 		}
 
 		available = {
-			threat > 0.05 
-			NOT = {
-				has_war = yes
-			}
+			
 		}
 
 		complete_effect = { 
@@ -676,32 +673,13 @@ r56rp_officer_training = {
 
 	morevolunteers_major_start = { # Starting Decision for Volunteers [MAJOR]
 		icon = GFX_decision_generic_prepare_civil_war
-		cost = 100
+		cost = 10
 		visible = {
 			is_major = yes
-			NOT = {
-				has_country_flag = rp_minorvolunteerallowed # just incase a minor becomes a major not to have double ideas.
-				has_country_flag = rp_majorvolunteerallowed # make sure this doesn't get re-fired
-			}
 		}
 
 		available = {
-			threat > 0.15
-			if = { # There you are Warlider no more Neutrality USA having volunteers everywhere
-				limit = {
-					original_tag = USA
-				}
-				OR = {
-					NOT = {
-						has_idea = USA_neutrality_act
-					}
-					has_completed_focus = USA_limited_intervention
-					has_war_support > 0.5
-				}
-				NOT = {
-					has_war = yes
-				}
-			}
+			
 		}
 
 		complete_effect = { # I don't beleive this flag hooks into anything and was a cut feature
@@ -718,7 +696,7 @@ r56rp_officer_training = {
 
 	morevolunteers_minor = {
 		icon = GFX_decision_generic_prepare_civil_war
-		cost = 50
+		cost = 10
 		visible = {
 			NOT = {
 				is_major = yes
@@ -728,11 +706,6 @@ r56rp_officer_training = {
 		}
 
 		available = {
-			threat > 0.05 
-			NOT = {
-				has_war = yes
-			}
-			has_country_flag = rp_minorvolunteerallowed
 		}
 
 		complete_effect = {
@@ -751,7 +724,7 @@ r56rp_officer_training = {
 
 	morevolunteers_major = { #less powerful major version idea being majors ususally have access to volunteers, be it a focus always open or, like with the usa, a choice.
 		icon = GFX_decision_generic_prepare_civil_war
-		cost = 125
+		cost = 10
 		visible = {
 			is_major = yes 
 			has_country_flag = rp_majorvolunteerallowed
@@ -760,11 +733,7 @@ r56rp_officer_training = {
 			}
 		}
 		available = {
-			has_country_flag = rp_majorvolunteerallowed
-			threat > 0.25 # tension check. logic being to force majors to wait till later in the game, or in an rp sence, using the globle situation to pass laws or acts allowing troops overseas.
-			NOT = {
-				has_war = yes
-			}
+			
 		}
 
 		complete_effect = {

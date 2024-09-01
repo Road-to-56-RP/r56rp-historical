@@ -985,10 +985,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_corpo_truppe_volontarie
 		available = {
-			has_volunteers_amount_from = {
-				tag = ITA
-				count > 0
-			}
+			
 		}
 		prerequisite = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
 		
@@ -1023,10 +1020,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_condor_legion
 		available = {
-			has_volunteers_amount_from = {
-				tag = GER
-				count > 0
-			}
+			
 		}
 		prerequisite = { focus = SPA_the_phalanx_ascendant focus = SPA_unify_the_nationalist_front }
 		
@@ -2745,22 +2739,23 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SPA_the_national_syndicalist_state
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		complete_tooltip = {
 			every_state = {
 				limit	= {	has_state_flag = SPA_the_national_and_popular_army_of_spain_2mil }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = r56rp_volunteers_idea 
 			army_experience = 10
 			random_owned_controlled_state = {
 				limit = {
@@ -2771,10 +2766,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3116,15 +3111,9 @@ focus_tree = {
 	focus = {
 		id = SPA_fascist_economic_aid
 		available = {
-			any_country = {
-				is_in_faction_with = ROOT
-				has_government = fascism
-				is_major = yes
-			}
 		}
 		prerequisite = { focus = SPA_join_the_axis focus = SPA_ally_the_french }
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_autarky }
 		
 		icon = GFX_goal_fascist_factory
 		x = 1
@@ -3510,16 +3499,16 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit	= {	has_state_flag = SPA_national_recovery_2civ }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
-			add_timed_idea = { idea = SPA_national_recovery_1 days = 1825 }
+			add_timed_idea = { idea = SPA_national_recovery_1 days = 1095 }
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3529,10 +3518,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_national_recovery_2civ
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3542,7 +3531,7 @@ focus_tree = {
 	focus = {
 		id = SPA_autarky
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
+		
 		
 		icon = GFX_goal_generic_oil_refinery
 		x = 1
@@ -5161,7 +5150,7 @@ focus_tree = {
 	focus = {
 		id = SPA_direct_the_universities
 		available = {
-			num_of_factories > 50
+			
 		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		
@@ -5180,12 +5169,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_dictator_for_life
-		available = {
-			has_country_leader = {
-				character = SPA_francisco_franco
-				ruling_only = yes
-			}
-		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		mutually_exclusive = { focus = SPA_restore_the_monarchy }
 		
@@ -5720,12 +5703,8 @@ focus_tree = {
 
 	focus = {
 		id = SPA_retake_gibraltar
-		available = {
-			NOT = {
-				is_in_faction_with = ENG
-				has_war_with = ENG
-				controls_state = 118
-			}
+		allow_branch = {
+			always = no
 		}
 		prerequisite = { focus = SPA_demand_french_north_africa }
 		prerequisite = { focus = SPA_defenses_against_invasion }

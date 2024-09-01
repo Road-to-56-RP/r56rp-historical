@@ -1,2 +1,6 @@
 HNK = "countries/Hong Kong.txt"
 NUL = "countries/NULL.txt"
+Z01 = "countries/Z01.txt"
+Z02 = "countries/Z02.txt"
+Z03 = "countries/Z03.txt"
+Z04 = "countries/Z04.txt"
