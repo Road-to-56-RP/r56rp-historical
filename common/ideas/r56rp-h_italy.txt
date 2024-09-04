@@ -1,0 +1,31 @@
+ideas = {
+    country = {
+        r56rp-h_ITA_naval_regia_aeronautica_precision = {
+            allowed = {
+                original_tag = ITA
+            }
+
+            picture = 
+
+            removal_cost = -1
+
+            modifier = {
+                naval_strike_targetting_factor = 0.2
+                port_strike = 0.2
+                air_nav_efficiency = 0.2
+            }
+            equipment_bonus = {
+				small_plane_naval_bomber_airframe = {
+					naval_strike_attack = 0.1
+					instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					naval_strike_attack = 0.1
+					instant = yes
+				}
+			}
+
+        }
+    }
+
+}
