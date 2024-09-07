@@ -198,6 +198,7 @@ focus_tree = {
 		}
 		
 		available = {
+			threat > 0.05
 		}
 		
 		bypass = {
@@ -841,7 +842,7 @@ focus_tree = {
 					has_dlc = "Man the Guns"
 				}
 				OR = {
-					threat > 0.1 
+					threat > 0.15 
 					has_war = yes
 					has_idea = ENG_no_further_appeasement_idea
 					NOT = { has_government = democratic }
@@ -852,7 +853,7 @@ focus_tree = {
 					NOT = { has_dlc = "Man the Guns" }
 				}
 				OR = {
-					threat > 0.1 
+					threat > 0.15
 					has_war = yes
 					NOT = { has_government = democratic }
 				}
