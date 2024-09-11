@@ -426,6 +426,56 @@ focus_tree = {
 				}
 			}
 		}
+	}
+	focus = {
+		id = r56rp-h_FRA_south-west_africa_france
+		icon = GFX_focus_generic_industry_1
+		available = {
+			any_state = {
+				OR = {
+					state = 779
+					state = 776
+					state = 773
+				}
+				OWNER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 0.2
+		}
+		prerequisite = {
+			focus = FRA_algerie_france
+		}
+		relative_position_id = FRA_algerie_france
+		available_if_capitulated = yes
+		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			557 = { add_extra_state_shared_building_slots = 2 }
+			272 = { add_extra_state_shared_building_slots = 2 }
+			780 = { add_extra_state_shared_building_slots = 2 }
+			298 = { add_extra_state_shared_building_slots = 2 }
+			779 = { add_extra_state_shared_building_slots = 2 }
+			778 = { add_extra_state_shared_building_slots = 2 }
+			777 = { add_extra_state_shared_building_slots = 2 }
+			776 = { add_extra_state_shared_building_slots = 2 }
+			773 = { add_extra_state_shared_building_slots = 2 }
+			539 = { add_extra_state_shared_building_slots = 2 }
+			772 = { add_extra_state_shared_building_slots = 2 }
+			660 = { add_extra_state_shared_building_slots = 2 }
+			774 = { add_extra_state_shared_building_slots = 2 }
+		}
 	}	
 	focus = {
 		id = FRA_invest_in_the_colonies

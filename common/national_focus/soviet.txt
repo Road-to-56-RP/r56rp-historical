@@ -2338,21 +2338,18 @@ focus_tree = {
 		x = 10
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			has_war = no
+			
 		}
 
 		bypass = {
-			AND = {
-				date > 1939.1.1
-				has_war = yes
-			}
+			
 		}
 
 		completion_reward = {
@@ -2375,8 +2372,9 @@ focus_tree = {
             }
 			add_timed_idea = {
 				idea = SOV_r56rp_transpolar_flights_idea
-				days = 435
+				days = 365
 			}
+			add_ideas = r56rp-h_SOV_soviet_air_limitations
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 	}
