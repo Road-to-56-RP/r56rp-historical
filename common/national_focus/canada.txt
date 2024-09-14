@@ -1562,30 +1562,12 @@ focus_tree = {
 
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt 
-				show_mio_tooltip = CAN_r56_ford_organization
-                mio:CAN_r56_ford_organization = {
-					add_mio_funds = 750
-				}
-				show_mio_tooltip = r56_CAN_gm_of_canada_organization 
-                mio:r56_CAN_gm_of_canada_organization  = {
-					add_mio_funds = 750
-				}	
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = r56_CAN_ford
-				show_ideas_tooltip = r56_CAN_gm_of_canada
-			}
 			add_tech_bonus = {
-				name = r56_CAN_cmp_truck
-				bonus = 3
+				name = CAN_cmp_truck
+				ahead_reduction = 2
+				bonus = 2.0
 				uses = 1
-				technology = motorised_infantry
+				category = motorized_equipment
 			}
 		}
 	}
