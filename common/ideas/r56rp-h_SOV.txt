@@ -1,0 +1,25 @@
+ideas = {
+    country = {
+        r56rp-h_SOV_soviet_air_limitations = {
+            allowed = {
+                original_tag = SOV
+            }
+
+            picture = SWE_marauder_bombers  
+
+            removal_cost = -10
+            equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 0.25
+				}
+                medium_plane_airframe = {
+                    build_cost_ic = 0.25
+                }
+                
+                
+			}
+
+        }
+    }
+
+}
